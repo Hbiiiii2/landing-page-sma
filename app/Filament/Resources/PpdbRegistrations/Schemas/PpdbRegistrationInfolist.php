@@ -62,7 +62,7 @@ class PpdbRegistrationInfolist
                                         }),
 
                                     TextEntry::make('origin_school')
-                                        ->label('Asal Sekolah (SD/MI)')
+                                        ->label('Asal Sekolah (SMP/MTs)')
                                         ->icon('heroicon-o-academic-cap')
                                         ->placeholder('-'),
 
@@ -221,7 +221,7 @@ class PpdbRegistrationInfolist
                                                 ->icon('heroicon-o-document-text'),
 
                                             TextEntry::make('graduation_certificate_file')
-                                                ->label('Ijazah / SKL SD')
+                                                ->label('Ijazah / SKL SMP')
                                                 ->formatStateUsing(fn ($state) => $state ? '📄 Buka Dokumen Ijazah / SKL' : '❌ Belum Diunggah')
                                                 ->url(fn ($record) => $record && $record->graduation_certificate_file ? route('admin.ppdb.document', ['registration' => $record->id, 'field' => 'graduation_certificate_file']) : null, true)
                                                 ->color(fn ($state) => $state ? 'primary' : 'danger')

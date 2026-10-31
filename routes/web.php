@@ -41,7 +41,7 @@ Route::get('/brosur', function () {
     if (! empty($profile?->brochure_file) && Storage::disk('public')->exists($profile->brochure_file)) {
         return Storage::disk('public')->download(
             $profile->brochure_file,
-            'Brosur-PPDB-' . \Illuminate\Support\Str::slug($profile->name ?? 'SMP-Al-Madinah') . '.' . pathinfo($profile->brochure_file, PATHINFO_EXTENSION)
+            'Brosur-PPDB-' . \Illuminate\Support\Str::slug($profile->name ?? 'SMA-Al-Madinah') . '.' . pathinfo($profile->brochure_file, PATHINFO_EXTENSION)
         );
     }
     return redirect()->route('home')->with('info', 'Brosur digital sedang dipersiapkan oleh Panitia PPDB.');
@@ -52,7 +52,7 @@ Route::get('/biaya-ppdb', function () {
     if (! empty($profile?->ppdb_fee_file) && Storage::disk('public')->exists($profile->ppdb_fee_file)) {
         return Storage::disk('public')->download(
             $profile->ppdb_fee_file,
-            'Rincian-Biaya-PPDB-' . \Illuminate\Support\Str::slug($profile->name ?? 'SMP-Al-Madinah') . '.' . pathinfo($profile->ppdb_fee_file, PATHINFO_EXTENSION)
+            'Rincian-Biaya-PPDB-' . \Illuminate\Support\Str::slug($profile->name ?? 'SMA-Al-Madinah') . '.' . pathinfo($profile->ppdb_fee_file, PATHINFO_EXTENSION)
         );
     }
     return redirect()->route('home')->with('info', 'Rincian biaya sedang dipersiapkan oleh Panitia PPDB.');

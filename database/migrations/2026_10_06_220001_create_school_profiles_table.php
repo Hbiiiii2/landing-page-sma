@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('school_profiles', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->default('SMP Al-Madinah');
+            $table->string('name')->default('SMA Al-Madinah');
             $table->string('npsn')->nullable();
             $table->string('accreditation')->default('A');
             $table->string('tagline')->nullable();

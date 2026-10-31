@@ -1,7 +1,7 @@
 @extends('layouts.public')
 
-@section('title', 'Galeri Kegiatan — SMP Islam Al-Madinah BSD')
-@section('meta_description', 'Dokumentasi foto kegiatan belajar mengajar, pembiasaan ibadah, ekstrakurikuler, dan sarana prasarana di lingkungan SMP Islam Al-Madinah BSD.')
+@section('title', 'Galeri Kegiatan — SMA Islam Al-Madinah BSD')
+@section('meta_description', 'Dokumentasi foto kegiatan belajar mengajar, pembiasaan ibadah, ekstrakurikuler, dan sarana prasarana di lingkungan SMA Islam Al-Madinah BSD.')
 
 @section('content')
 <!-- Header Banner -->
@@ -16,7 +16,7 @@
             Galeri Kegiatan Siswa
         </h1>
         <p class="text-xs sm:text-sm md:text-base text-white/85 max-w-2xl mx-auto leading-relaxed">
-            Merekam jejak pembiasaan adab Islami, pembelajaran terpadu, tahfidz Al-Qur'an, eksperimen sains, dan kreasi santri SMP Islam Al-Madinah BSD.
+            Merekam jejak pembiasaan adab Islami, pembelajaran terpadu, tahfidz Al-Qur'an, eksperimen sains, dan kreasi santri SMA Islam Al-Madinah BSD.
         </p>
     </div>
 </section>
@@ -120,7 +120,7 @@
                                 <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 drop-shadow-sm">
                                     {{ $item['title'] }}
                                 </h3>
-                                <p class="text-[11px] text-white/75 mt-1">SMP Islam Al-Madinah BSD</p>
+                                <p class="text-[11px] text-white/75 mt-1">SMA Islam Al-Madinah BSD</p>
                             </div>
                         </div>
                     </div>

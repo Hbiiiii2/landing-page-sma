@@ -6,27 +6,27 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Page Title & Meta Tags -->
-    <title>@yield('title', 'SMP Islam Al-Madinah BSD — Sekolah Menengah Pertama Berkarakter & Unggul')</title>
-    <meta name="description" content="@yield('meta_description', 'Portal Resmi SMP Islam Al-Madinah BSD di bawah naungan Yayasan Kerukunan Keluarga Muslim BSD. Menyeimbangkan pendidikan karakter Islami, tahfidz Al-Qur\'an, dwibahasa, dan sains teknologi modern di Serpong, Tangerang Selatan.')">
-    <meta name="keywords" content="@yield('meta_keywords', 'SMP Al-Madinah BSD, SMP Islam Al-Madinah BSD, PPDB SMP BSD, Sekolah Islam Tangerang Selatan, YKKM BSD, Islamic Center KKMB, SMP Swasta Terbaik BSD')">
-    <meta name="author" content="SMP Islam Al-Madinah BSD">
+    <title>@yield('title', 'SMA Islam Al-Madinah BSD — Sekolah Menengah Atas Berkarakter & Unggul')</title>
+    <meta name="description" content="@yield('meta_description', 'Portal Resmi SMA Islam Al-Madinah BSD di bawah naungan Yayasan Kerukunan Keluarga Muslim BSD. Menyeimbangkan pendidikan karakter Islami, tahfidz Al-Qur\'an, dwibahasa, dan sains teknologi modern di Serpong, Tangerang Selatan.')">
+    <meta name="keywords" content="@yield('meta_keywords', 'SMA Al-Madinah BSD, SMA Islam Al-Madinah BSD, PPDB SMA BSD, Sekolah Islam Tangerang Selatan, YKKM BSD, Islamic Center KKMB, SMA Swasta Terbaik BSD')">
+    <meta name="author" content="SMA Islam Al-Madinah BSD">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="@yield('canonical', url()->current())">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="@yield('og_type', 'website')">
     <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:site_name" content="SMP Islam Al-Madinah BSD">
+    <meta property="og:site_name" content="SMA Islam Al-Madinah BSD">
     <meta property="og:locale" content="id_ID">
-    <meta property="og:title" content="@yield('og_title', 'SMP Islam Al-Madinah BSD — Mendidik Karakter, Membina Prestasi')">
-    <meta property="og:description" content="@yield('og_description', 'Pendidikan menengah pertama berkualitas berbasis karakter Islami, tahfidz, dan sains modern di Sektor XIV BSD City, Serpong, Tangerang Selatan.')">
+    <meta property="og:title" content="@yield('og_title', 'SMA Islam Al-Madinah BSD — Mendidik Karakter, Membina Prestasi')">
+    <meta property="og:description" content="@yield('og_description', 'Pendidikan menengah atas berkualitas berbasis karakter Islami, tahfidz, dan sains modern di Sektor XIV BSD City, Serpong, Tangerang Selatan.')">
     <meta property="og:image" content="@yield('og_image', asset('images/logo-almadinah.png'))">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="{{ url()->current() }}">
-    <meta name="twitter:title" content="@yield('og_title', 'SMP Islam Al-Madinah BSD — Mendidik Karakter, Membina Prestasi')">
-    <meta name="twitter:description" content="@yield('og_description', 'Pendidikan menengah pertama berkualitas berbasis karakter Islami, tahfidz, dan sains modern di Sektor XIV BSD City, Serpong, Tangerang Selatan.')">
+    <meta name="twitter:title" content="@yield('og_title', 'SMA Islam Al-Madinah BSD — Mendidik Karakter, Membina Prestasi')">
+    <meta name="twitter:description" content="@yield('og_description', 'Pendidikan menengah atas berkualitas berbasis karakter Islami, tahfidz, dan sains modern di Sektor XIV BSD City, Serpong, Tangerang Selatan.')">
     <meta name="twitter:image" content="@yield('og_image', asset('images/logo-almadinah.png'))">
 
     <!-- Local SEO & Geo Meta Tags -->
@@ -43,15 +43,15 @@
                 [
                     '@type' => 'School',
                     '@id' => url('/') . '#school',
-                    'name' => 'SMP Islam Al-Madinah BSD',
-                    'alternateName' => ['SMP Al-Madinah BSD', 'SMP Al Madinah Islamic Center KKMB', 'SMP Al-Madinah YKKM'],
+                    'name' => 'SMA Islam Al-Madinah BSD',
+                    'alternateName' => ['SMA Al-Madinah BSD', 'SMA Al Madinah Islamic Center KKMB', 'SMA Al-Madinah YKKM'],
                     'url' => url('/'),
                     'logo' => [
                         '@type' => 'ImageObject',
                         'url' => asset('images/logo-almadinah.png'),
                     ],
                     'image' => asset('images/logo-almadinah.png'),
-                    'description' => 'Sekolah Menengah Pertama Islam Al-Madinah BSD di bawah naungan Yayasan Kerukunan Keluarga Muslim BSD (YKKM BSD). Mengintegrasikan kurikulum nasional, tahfidz Al-Qur\'an, dwibahasa, dan sains modern.',
+                    'description' => 'Sekolah Menengah Atas Islam Al-Madinah BSD di bawah naungan Yayasan Kerukunan Keluarga Muslim BSD (YKKM BSD). Mengintegrasikan kurikulum nasional, tahfidz Al-Qur\'an, dwibahasa, dan sains modern.',
                     'telephone' => '(021) 538-8888',
                     'email' => 'info@smpalmadinah.sch.id',
                     'address' => [
@@ -77,7 +77,7 @@
                     '@type' => 'WebSite',
                     '@id' => url('/') . '#website',
                     'url' => url('/'),
-                    'name' => 'SMP Islam Al-Madinah BSD',
+                    'name' => 'SMA Islam Al-Madinah BSD',
                     'publisher' => [
                         '@id' => url('/') . '#school',
                     ],

@@ -1,7 +1,7 @@
 @props(['profile' => null])
 
 @php
-    $schoolName = $profile->name ?? 'SMP Islam Al-Madinah BSD';
+    $schoolName = $profile->name ?? 'SMA Islam Al-Madinah BSD';
     $address = $profile->address ?? 'Komplek BSD City Sektor XIV, Serpong, Tangerang Selatan, Banten';
     $phone = $profile->phone ?? '(021) 538-8888';
     $email = $profile->email ?? 'info@smpalmadinah.sch.id';
@@ -136,10 +136,10 @@
     <div class="bg-[#2A923F] text-white py-3.5 px-4 text-center text-xs border-t border-[#217333]">
         <div class="max-w-[1240px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-2.5">
             <div>
-                &copy; {{ date('Y') }} <strong>SMP Islam Al-Madinah BSD</strong>. Hak Cipta Dilindungi Undang-Undang.
+                &copy; {{ date('Y') }} <strong>SMA Islam Al-Madinah BSD</strong>. Hak Cipta Dilindungi Undang-Undang.
             </div>
             <div class="text-[11px] opacity-90 flex flex-wrap items-center justify-center sm:justify-end gap-x-2 gap-y-1">
-                <span>Pendidikan Menengah Pertama Islami, Berkarakter & Unggul</span>
+                <span>Pendidikan Menengah Atas Islami, Berkarakter & Unggul</span>
                 <span class="opacity-60 hidden sm:inline">•</span>
                 <span>Powered by <a href="https://aybisa-workspace.my.id" target="_blank" rel="noopener noreferrer" class="font-bold text-white hover:underline underline-offset-2 transition-all">Aybisa Studio</a></span>
             </div>

@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-echo "Starting SMP Islam Al-Madinah Application Container..."
+echo "Starting SMA Islam Al-Madinah Application Container..."
 
 # Ensure required directories exist
 mkdir -p /var/www/html/storage/framework/sessions \

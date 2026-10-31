@@ -20,7 +20,7 @@ RUN composer install \
 # -------------------------------------------------------------
 FROM php:8.4-fpm-alpine
 
-LABEL maintainer="SMP Islam Al-Madinah BSD"
+LABEL maintainer="SMA Islam Al-Madinah BSD"
 
 WORKDIR /var/www/html
 

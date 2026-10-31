@@ -1,11 +1,11 @@
 @extends('layouts.public')
 
-@section('title', 'Pendaftaran PPDB Online — SMP Islam Al-Madinah BSD')
-@section('meta_description', 'Pendaftaran Peserta Didik Baru (PPDB) Online SMP Islam Al-Madinah BSD Tahun Ajaran 2027/2028. Informasi kuota rombel, persyaratan berkas, dan registrasi santri baru.')
+@section('title', 'Pendaftaran PPDB Online — SMA Islam Al-Madinah BSD')
+@section('meta_description', 'Pendaftaran Peserta Didik Baru (PPDB) Online SMA Islam Al-Madinah BSD Tahun Ajaran 2027/2028. Informasi kuota rombel, persyaratan berkas, dan registrasi santri baru.')
 
 @section('content')
 @php
-    $schoolName = $profile->name ?? 'SMP Islam Al-Madinah BSD';
+    $schoolName = $profile->name ?? 'SMA Islam Al-Madinah BSD';
     $academicYear = $ppdbSetting->academic_year ?? '2027/2028';
     $whatsapp = $profile->whatsapp ?? '0812-9988-7766';
     $whatsappClean = preg_replace('/[^0-9]/', '', $whatsapp);
@@ -28,7 +28,7 @@
                     Pendaftaran PPDB Online
                 </h1>
                 <p class="text-sm sm:text-base text-white/85 max-w-xl leading-relaxed">
-                    Silakan lengkapi formulir pendaftaran santri baru SMP Islam Al-Madinah BSD dengan data yang valid dan sesuai dokumen resmi.
+                    Silakan lengkapi formulir pendaftaran santri baru SMA Islam Al-Madinah BSD dengan data yang valid dan sesuai dokumen resmi.
                 </p>
             </div>
 
@@ -121,7 +121,7 @@
                     <div class="space-y-1.5">
                         <label class="text-xs font-bold text-[#202124]">NISN (Nomor Induk Siswa Nasional)</label>
                         <input type="text" name="nisn" value="{{ old('nisn') }}" 
-                               placeholder="10 digit NISN dari SD/MI"
+                               placeholder="10 digit NISN dari SMP/MTs"
                                class="w-full px-4 py-2.5 rounded-xl border border-[#E7E3EA] text-sm text-[#202124] focus:outline-none focus:border-[#9377AD] focus:ring-2 focus:ring-[#9377AD]/20 transition-all bg-[#FAF8FC]">
                     </div>
 
@@ -151,9 +151,9 @@
                     </div>
 
                     <div class="space-y-1.5">
-                        <label class="text-xs font-bold text-[#202124]">Asal Sekolah (SD/MI)</label>
+                        <label class="text-xs font-bold text-[#202124]">Asal Sekolah (SMP/MTs)</label>
                         <input type="text" name="origin_school" value="{{ old('origin_school') }}" 
-                               placeholder="Contoh: SD Islam Al-Azhar BSD / SDN 01 Serpong"
+                               placeholder="Contoh: SMP Islam Al-Azhar BSD / SMPN 01 Serpong"
                                class="w-full px-4 py-2.5 rounded-xl border border-[#E7E3EA] text-sm text-[#202124] focus:outline-none focus:border-[#9377AD] focus:ring-2 focus:ring-[#9377AD]/20 transition-all bg-[#FAF8FC]">
                     </div>
 

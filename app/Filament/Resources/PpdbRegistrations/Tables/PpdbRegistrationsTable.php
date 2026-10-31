@@ -34,7 +34,7 @@ class PpdbRegistrationsTable
                     ->searchable()
                     ->sortable()
                     ->weight('semibold')
-                    ->description(fn (PpdbRegistration $record): string => 'SD: ' . ($record->origin_school ?? '-')),
+                    ->description(fn (PpdbRegistration $record): string => 'SMP: ' . ($record->origin_school ?? '-')),
 
                 TextColumn::make('gender')
                     ->label('L/P')
@@ -113,7 +113,7 @@ class PpdbRegistrationsTable
                             $output = fopen('php://output', 'w');
                             // BOM for UTF-8 Excel support
                             fputs($output, "\xEF\xBB\xBF");
-                            fputcsv($output, ['No', 'No. Registrasi', 'Tahun Ajaran', 'Nama Calon Siswa', 'NIK', 'NISN', 'Jenis Kelamin', 'Tempat Lahir', 'Tanggal Lahir', 'Agama', 'Alamat', 'Asal SD', 'No WA Siswa', 'Nama Orang Tua', 'No WA Ortu', 'Nama Wali', 'Status', 'Catatan Verifikasi', 'Tgl Daftar']);
+                            fputcsv($output, ['No', 'No. Registrasi', 'Tahun Ajaran', 'Nama Calon Siswa', 'NIK', 'NISN', 'Jenis Kelamin', 'Tempat Lahir', 'Tanggal Lahir', 'Agama', 'Alamat', 'Asal SMP', 'No WA Siswa', 'Nama Orang Tua', 'No WA Ortu', 'Nama Wali', 'Status', 'Catatan Verifikasi', 'Tgl Daftar']);
 
                             $records = PpdbRegistration::latest()->get();
                             $no = 1;

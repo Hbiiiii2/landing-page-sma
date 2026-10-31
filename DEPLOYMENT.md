@@ -1,6 +1,6 @@
-# Panduan Deploy Docker ke Internet - SMP Islam Al-Madinah BSD
+# Panduan Deploy Docker ke Internet - SMA Islam Al-Madinah BSD
 
-Panduan ini menjelaskan langkah demi langkah untuk mendeploy website **SMP Islam Al-Madinah BSD** ke server VPS (Virtual Private Server) di internet (misal: DigitalOcean, Linode, AWS Lightsail, Contabo, IdCloudHost, Biznet, dll) menggunakan **Docker & Docker Compose**.
+Panduan ini menjelaskan langkah demi langkah untuk mendeploy website **SMA Islam Al-Madinah BSD** ke server VPS (Virtual Private Server) di internet (misal: DigitalOcean, Linode, AWS Lightsail, Contabo, IdCloudHost, Biznet, dll) menggunakan **Docker & Docker Compose**.
 
 ---
 
@@ -76,10 +76,10 @@ nano .env
 ```
 
 Sesuaikan parameter penting berikut:
-- `APP_NAME`: `"SMP Islam Al-Madinah BSD"`
+- `APP_NAME`: `"SMA Islam Al-Madinah BSD"`
 - `APP_ENV`: `production`
 - `APP_DEBUG`: `false`
-- `APP_URL`: Masukkan domain Anda, contoh: `https://smpalmadinah.sch.id`
+- `APP_URL`: Masukkan domain Anda, contoh: `https://smaalmadinah.sch.id`
 - `DB_DATABASE`: `smp`
 - `DB_USERNAME`: `smp_user`
 - `DB_PASSWORD`: Buat password database yang kuat

@@ -1,7 +1,7 @@
 @extends('layouts.public')
 
-@section('title', 'Berita & Warta — SMP Islam Al-Madinah BSD')
-@section('meta_description', 'Kumpulan berita terkini, artikel edukasi, warta kegiatan santri, dan pengumuman resmi SMP Islam Al-Madinah BSD.')
+@section('title', 'Berita & Warta — SMA Islam Al-Madinah BSD')
+@section('meta_description', 'Kumpulan berita terkini, artikel edukasi, warta kegiatan santri, dan pengumuman resmi SMA Islam Al-Madinah BSD.')
 
 @section('content')
 <!-- Header Banner -->
@@ -16,7 +16,7 @@
             Berita & Warta Sekolah
         </h1>
         <p class="text-xs sm:text-sm md:text-base text-white/85 max-w-2xl mx-auto leading-relaxed">
-            Informasi terkini seputar agenda akademik, prestasi santri, pengumuman yayasan, dan dinamika pembelajaran di SMP Islam Al-Madinah BSD.
+            Informasi terkini seputar agenda akademik, prestasi santri, pengumuman yayasan, dan dinamika pembelajaran di SMA Islam Al-Madinah BSD.
         </p>
     </div>
 </section>

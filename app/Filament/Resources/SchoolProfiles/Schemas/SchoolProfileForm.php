@@ -36,7 +36,7 @@ class SchoolProfileForm
                                                 TextInput::make('name')
                                                     ->label('Nama Resmi Sekolah')
                                                     ->required()
-                                                    ->default('SMP Al-Madinah')
+                                                    ->default('SMA Al-Madinah')
                                                     ->prefixIcon('heroicon-o-academic-cap'),
 
                                                 TextInput::make('npsn')
@@ -155,7 +155,7 @@ class SchoolProfileForm
                                     ]),
 
                                 Section::make('Foto Bagian: Mengapa Memilih Kami (Section 05)')
-                                    ->description('Foto portrait santri/siswa berprestasi yang tampil di sebelah kanan checklist "Mengapa Memilih SMP Islam Al-Madinah BSD?".')
+                                    ->description('Foto portrait santri/siswa berprestasi yang tampil di sebelah kanan checklist "Mengapa Memilih SMA Islam Al-Madinah BSD?".')
                                     ->schema([
                                         FileUpload::make('why_choose_us_image')
                                             ->label('Foto Siswa / Santri (Mengapa Memilih Kami)')
@@ -191,7 +191,7 @@ class SchoolProfileForm
                                     ]),
 
                                 Section::make('4 Foto Kolase Bagian: Daftar Sekarang Juga (Section 07 PPDB)')
-                                    ->description('4 foto kegiatan atau santri yang tampil dalam grid 2x2 di samping formulir/ajakan "Daftar SMP Islam Al-Madinah BSD Sekarang Juga!". Anda dapat mengganti masing-masing foto secara fleksibel.')
+                                    ->description('4 foto kegiatan atau santri yang tampil dalam grid 2x2 di samping formulir/ajakan "Daftar SMA Islam Al-Madinah BSD Sekarang Juga!". Anda dapat mengganti masing-masing foto secara fleksibel.')
                                     ->schema([
                                         Grid::make(2)->schema([
                                             FileUpload::make('cta_collage_image_1')
@@ -345,7 +345,7 @@ class SchoolProfileForm
                                         Textarea::make('about')
                                             ->label('Profil Singkat & Sejarah Lembaga')
                                             ->rows(4)
-                                            ->placeholder('Jelaskan secara ringkas sejarah pendirian, visi pembinaan karakter, dan identitas keunggulan SMP Al-Madinah...')
+                                            ->placeholder('Jelaskan secara ringkas sejarah pendirian, visi pembinaan karakter, dan identitas keunggulan SMA Al-Madinah...')
                                             ->helperText('Tampil di section Tentang Kami di landing page'),
                                     ]),
 
@@ -444,7 +444,7 @@ class SchoolProfileForm
                                                 ->label('Tautan Kustom WhatsApp / Direct Link (Opsional)')
                                                 ->url()
                                                 ->prefixIcon('heroicon-o-link')
-                                                ->placeholder('Contoh: https://wa.link/smpalmadinah atau https://bit.ly/wa-ppdb')
+                                                ->placeholder('Contoh: https://wa.link/smaalmadinah atau https://bit.ly/wa-ppdb')
                                                 ->helperText('Jika diisi, semua tombol WhatsApp di website akan langsung mengarah ke tautan khusus ini.'),
                                         ]),
                                     ]),
@@ -456,25 +456,25 @@ class SchoolProfileForm
                                             Textarea::make('whatsapp_message_panitia')
                                                 ->label('Template Pesan: "Chat WA Panitia" / "Konsultasi PPDB"')
                                                 ->rows(2)
-                                                ->placeholder('Assalamu\'alaikum Panitia PPDB SMP Al-Madinah, saya ingin konsultasi mengenai Penerimaan Santri Baru...')
+                                                ->placeholder('Assalamu\'alaikum Panitia PPDB SMA Al-Madinah, saya ingin konsultasi mengenai Penerimaan Santri Baru...')
                                                 ->helperText('Tampil saat pengunjung klik tombol Chat WA Panitia atau Konsultasi PPDB.'),
 
                                             Textarea::make('whatsapp_message_brosur')
                                                 ->label('Template Pesan: "Minta Brosur via WA"')
                                                 ->rows(2)
-                                                ->placeholder('Assalamu\'alaikum Panitia PPDB SMP Al-Madinah, saya ingin meminta berkas Brosur Resmi PPDB...')
+                                                ->placeholder('Assalamu\'alaikum Panitia PPDB SMA Al-Madinah, saya ingin meminta berkas Brosur Resmi PPDB...')
                                                 ->helperText('Tampil pada modal brosur saat pengunjung memilih opsi hubungi panitia.'),
 
                                             Textarea::make('whatsapp_message_biaya')
                                                 ->label('Template Pesan: "Tanya Biaya via WA"')
                                                 ->rows(2)
-                                                ->placeholder('Assalamu\'alaikum Panitia PPDB SMP Al-Madinah, saya ingin menanyakan rincian Biaya PPDB & SPP...')
+                                                ->placeholder('Assalamu\'alaikum Panitia PPDB SMA Al-Madinah, saya ingin menanyakan rincian Biaya PPDB & SPP...')
                                                 ->helperText('Tampil pada modal rincian biaya saat pengunjung memilih opsi hubungi panitia.'),
 
                                             Textarea::make('whatsapp_message_floating')
                                                 ->label('Template Pesan: Tombol Melayang (Floating WA Button)')
                                                 ->rows(2)
-                                                ->placeholder('Assalamu\'alaikum Admin SMP Al-Madinah, saya ingin bertanya informasi pendaftaran dan kegiatan sekolah.')
+                                                ->placeholder('Assalamu\'alaikum Admin SMA Al-Madinah, saya ingin bertanya informasi pendaftaran dan kegiatan sekolah.')
                                                 ->helperText('Tampil saat pengunjung mengklik widget tombol WhatsApp hijau yang melayang di pojok kanan bawah.'),
                                         ]),
                                     ]),
@@ -509,25 +509,25 @@ class SchoolProfileForm
                                                 ->label('Instagram URL')
                                                 ->url()
                                                 ->prefixIcon('heroicon-o-camera')
-                                                ->placeholder('https://instagram.com/smpalmadinah'),
+                                                ->placeholder('https://instagram.com/smaalmadinah'),
 
                                             TextInput::make('youtube_url')
                                                 ->label('YouTube Channel URL')
                                                 ->url()
                                                 ->prefixIcon('heroicon-o-video-camera')
-                                                ->placeholder('https://youtube.com/@smpalmadinah'),
+                                                ->placeholder('https://youtube.com/@smaalmadinah'),
 
                                             TextInput::make('facebook_url')
                                                 ->label('Facebook URL')
                                                 ->url()
                                                 ->prefixIcon('heroicon-o-globe-alt')
-                                                ->placeholder('https://facebook.com/smpalmadinah'),
+                                                ->placeholder('https://facebook.com/smaalmadinah'),
 
                                             TextInput::make('tiktok_url')
                                                 ->label('TikTok URL')
                                                 ->url()
                                                 ->prefixIcon('heroicon-o-musical-note')
-                                                ->placeholder('https://tiktok.com/@smpalmadinah'),
+                                                ->placeholder('https://tiktok.com/@smaalmadinah'),
                                         ]),
                                     ]),
 

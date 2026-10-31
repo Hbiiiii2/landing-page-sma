@@ -1,9 +1,9 @@
 @extends('layouts.public')
 
-@section('title', ($post->title ?? 'Berita') . ' — SMP Islam Al-Madinah BSD')
+@section('title', ($post->title ?? 'Berita') . ' — SMA Islam Al-Madinah BSD')
 @section('meta_description', \Illuminate\Support\Str::limit(strip_tags($post->content ?? ''), 160))
 @section('og_type', 'article')
-@section('og_title', ($post->title ?? 'Berita') . ' — SMP Islam Al-Madinah BSD')
+@section('og_title', ($post->title ?? 'Berita') . ' — SMA Islam Al-Madinah BSD')
 @section('og_description', \Illuminate\Support\Str::limit(strip_tags($post->content ?? ''), 160))
 @section('og_image', !empty($post->featured_image) ? asset('storage/' . $post->featured_image) : asset('images/banner-almadinah.png'))
 
@@ -20,11 +20,11 @@
         'dateModified' => ($post->updated_at ?? $post->published_at ?? now())->toAtomString(),
         'author' => [
             '@type' => 'Person',
-            'name' => $post->author?->name ?? 'Humas SMP Islam Al-Madinah BSD',
+            'name' => $post->author?->name ?? 'Humas SMA Islam Al-Madinah BSD',
         ],
         'publisher' => [
             '@type' => 'School',
-            'name' => 'SMP Islam Al-Madinah BSD',
+            'name' => 'SMA Islam Al-Madinah BSD',
             'logo' => [
                 '@type' => 'ImageObject',
                 'url' => asset('images/logo-almadinah.png'),
@@ -43,7 +43,7 @@
         ? asset('storage/' . $post->featured_image) 
         : 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80';
     $dateStr = $post->published_at?->translatedFormat('d F Y') ?? $post->created_at?->translatedFormat('d F Y');
-    $authorName = $post->author?->name ?? 'Humas SMP Islam Al-Madinah BSD';
+    $authorName = $post->author?->name ?? 'Humas SMA Islam Al-Madinah BSD';
 @endphp
 
 <!-- Breadcrumb bar -->
@@ -158,7 +158,7 @@
                         Penerimaan Santri Baru Telah Dibuka!
                     </h4>
                     <p class="text-xs text-white/80 leading-relaxed">
-                        Kuota terbatas maksimal 24 siswa per rombel. Segera amankan kursi ananda bersama SMP Islam Al-Madinah BSD.
+                        Kuota terbatas maksimal 24 siswa per rombel. Segera amankan kursi ananda bersama SMA Islam Al-Madinah BSD.
                     </p>
                     <div class="pt-2">
                         <a href="{{ route('ppdb.index') }}" 

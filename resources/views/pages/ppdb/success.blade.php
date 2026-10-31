@@ -94,7 +94,7 @@
 
 @section('content')
 @php
-    $schoolName = $profile->name ?? 'SMP Islam Al-Madinah BSD';
+    $schoolName = $profile->name ?? 'SMA Islam Al-Madinah BSD';
     $whatsapp = $profile->whatsapp ?? '0812-9988-7766';
     $whatsappClean = $profile?->whatsapp_ppdb_clean ?? $profile?->whatsapp_clean;
     if (! $whatsappClean) {
@@ -104,7 +104,7 @@
         }
     }
 
-    $rawMessage = "Assalamu'alaikum Panitia PPDB SMP Islam Al-Madinah BSD,\n" .
+    $rawMessage = "Assalamu'alaikum Panitia PPDB SMA Islam Al-Madinah BSD,\n" .
         "Saya telah menyelesaikan pendaftaran online:\n" .
         "• No. Registrasi: {$registration->registration_number}\n" .
         "• Nama Calon Siswa: {$registration->full_name}\n" .
@@ -127,7 +127,7 @@
             <div>
                 <h3 class="text-sm font-bold">Alhamdulillah, Pendaftaran Berhasil Disimpan!</h3>
                 <p class="text-xs text-[#217333] mt-0.5">
-                    Data pendaftaran telah tercatat resmi di sistem panitia PPDB SMP Islam Al-Madinah BSD.
+                    Data pendaftaran telah tercatat resmi di sistem panitia PPDB SMA Islam Al-Madinah BSD.
                 </p>
             </div>
         </div>
@@ -139,7 +139,7 @@
             <div id="receipt-header" class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b-2 border-[#9377AD] pb-5 sm:pb-6">
                 <div class="flex items-center gap-3 sm:gap-3.5">
                     <img src="{{ asset('images/logo-almadinah.png') }}" 
-                         alt="Logo SMP Islam Al-Madinah BSD" 
+                         alt="Logo SMA Islam Al-Madinah BSD" 
                          class="w-12 h-12 sm:w-16 sm:h-16 object-contain shrink-0"
                          onerror="this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuAmbTzxzgl6wWksQemxIkN-NrASOhgrQ43jj8Ie82Cr-QQ_hO3Nldfe9ifPaO9jd5ShbMBwhbhUe95-6ZJnxMykUPQy1mucK-BSdzNVvAN-PahWS4DL6O6pZ1FEuzzjZek6KT_3GLxGyKhNz4UZcySi6KGAzmo5b4mcmlisOO0y1YY4VOIMWnxczmaESHA2jdQb68UL-7N8WImgP0evy_Cq86tebAneTuXeWKLRBlUDDyshxu9H6sNI'">
                     <div>
@@ -246,7 +246,7 @@
                 <div>
                     <p class="text-[#66676B]">Catatan Resmi:</p>
                     <p class="text-[10px] text-[#66676B] mt-1 leading-relaxed">
-                        Dokumen ini dicetak secara otomatis melalui portal resmi PPDB Online SMP Islam Al-Madinah BSD (YKKM BSD).
+                        Dokumen ini dicetak secara otomatis melalui portal resmi PPDB Online SMA Islam Al-Madinah BSD (YKKM BSD).
                     </p>
                 </div>
                 <div class="text-left sm:text-right space-y-8 sm:space-y-12">

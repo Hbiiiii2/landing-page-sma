@@ -1,11 +1,11 @@
 @extends('layouts.public')
 
-@section('title', 'Program Pendidikan & Ekstrakurikuler — SMP Islam Al-Madinah BSD')
-@section('meta_description', 'Program unggulan kurikulum nasional, tahfidz Al-Qur\'an bersanad, dwibahasa, serta beragam ekstrakurikuler sains, robotik, dan olahraga di SMP Islam Al-Madinah BSD.')
+@section('title', 'Program Pendidikan & Ekstrakurikuler — SMA Islam Al-Madinah BSD')
+@section('meta_description', 'Program unggulan kurikulum nasional, tahfidz Al-Qur\'an bersanad, dwibahasa, serta beragam ekstrakurikuler sains, robotik, dan olahraga di SMA Islam Al-Madinah BSD.')
 
 @section('content')
 @php
-    $schoolName = $profile->name ?? 'SMP Al-Madinah BSD';
+    $schoolName = $profile->name ?? 'SMA Al-Madinah BSD';
 @endphp
 
 <!-- Header Banner -->
@@ -18,7 +18,7 @@
             Program Pendidikan & Ekstrakurikuler
         </h1>
         <p class="text-xs sm:text-sm text-purple-100 max-w-xl mx-auto">
-            Memadukan keilmuan akademik, kemahiran Al-Qur'an, dan eksplorasi bakat siswa secara berimbang di SMP Al-Madinah BSD.
+            Memadukan keilmuan akademik, kemahiran Al-Qur'an, dan eksplorasi bakat siswa secara berimbang di SMA Al-Madinah BSD.
         </p>
     </div>
 </section>

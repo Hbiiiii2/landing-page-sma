@@ -1,11 +1,11 @@
 @extends('layouts.public')
 
-@section('title', 'Cek Status Pendaftaran PPDB — SMP Islam Al-Madinah BSD')
-@section('meta_description', 'Pantau status verifikasi berkas dan hasil seleksi santri baru PPDB SMP Islam Al-Madinah BSD secara mandiri.')
+@section('title', 'Cek Status Pendaftaran PPDB — SMA Islam Al-Madinah BSD')
+@section('meta_description', 'Pantau status verifikasi berkas dan hasil seleksi santri baru PPDB SMA Islam Al-Madinah BSD secara mandiri.')
 
 @section('content')
 @php
-    $schoolName = $profile->name ?? 'SMP Islam Al-Madinah BSD';
+    $schoolName = $profile->name ?? 'SMA Islam Al-Madinah BSD';
     $waUrlPanitia = $profile?->whatsapp_panitia_url ?? ('https://wa.me/' . ($profile?->whatsapp_ppdb_clean ?? '6281299887766'));
 @endphp
 
@@ -21,7 +21,7 @@
             Cek Status Pendaftaran PPDB
         </h1>
         <p class="text-sm sm:text-base text-white/85 max-w-lg mx-auto leading-relaxed">
-            Pantau status verifikasi berkas dan hasil seleksi santri baru SMP Islam Al-Madinah BSD secara mandiri.
+            Pantau status verifikasi berkas dan hasil seleksi santri baru SMA Islam Al-Madinah BSD secara mandiri.
         </p>
     </div>
 </section>

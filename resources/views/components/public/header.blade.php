@@ -4,7 +4,7 @@
 ])
 
 @php
-    $schoolName = $profile->name ?? 'SMP Al-Madinah BSD';
+    $schoolName = $profile->name ?? 'SMA Al-Madinah BSD';
     $foundationName = 'Islamic Center KKMB • Sektor XIV BSD';
     $address = $profile->address ?? 'Komplek BSD City Sektor XIV, Serpong, Tangerang Selatan';
     $phone = $profile->phone ?? '(021) 538-8888';
@@ -57,7 +57,7 @@
                          onerror="this.src='{{ asset('images/logo-almadinah.png') }}'">
                     <div class="leading-tight min-w-0">
                         <div class="text-sm sm:text-base md:text-lg font-black text-[#202124] group-hover:text-[#2A923F] transition-colors tracking-tight truncate">
-                            SMP Islam Al-Madinah
+                            SMA Islam Al-Madinah
                         </div>
                         <div class="text-[10px] sm:text-[11px] text-[#66676B] font-semibold tracking-wide truncate">
                             BSD City • Islamic Center KKMB

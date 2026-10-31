@@ -53,8 +53,8 @@ class PpdbRegistrationForm
 
                                             Grid::make(2)->schema([
                                                 TextInput::make('origin_school')
-                                                    ->label('Asal Sekolah (SD/MI)')
-                                                    ->placeholder('Contoh: SDIT Al-Ihsan')
+                                                    ->label('Asal Sekolah (SMP/MTs)')
+                                                    ->placeholder('Contoh: SMPIT Al-Ihsan')
                                                     ->prefixIcon('heroicon-o-academic-cap'),
 
                                                 Select::make('gender')
@@ -233,7 +233,7 @@ class PpdbRegistrationForm
                                                 ->helperText('Format PDF atau JPG/PNG, maks. 3MB'),
 
                                             FileUpload::make('graduation_certificate_file')
-                                                ->label('Ijazah / SKL SD')
+                                                ->label('Ijazah / SKL SMP')
                                                 ->acceptedFileTypes(['application/pdf', 'image/jpeg', 'image/png', 'image/webp'])
                                                 ->disk('local')
                                                 ->visibility('private')

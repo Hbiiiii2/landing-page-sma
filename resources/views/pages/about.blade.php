@@ -1,11 +1,11 @@
 @extends('layouts.public')
 
-@section('title', 'Tentang Kami & Profil — SMP Islam Al-Madinah BSD')
-@section('meta_description', 'Profil lengkap, sejarah pendirian, visi & misi, dewan asatidz guru pengajar, dan fasilitas SMP Al-Madinah Islamic Center KKMB di Sektor XIV BSD City.')
+@section('title', 'Tentang Kami & Profil — SMA Islam Al-Madinah BSD')
+@section('meta_description', 'Profil lengkap, sejarah pendirian, visi & misi, dewan asatidz guru pengajar, dan fasilitas SMA Al-Madinah Islamic Center KKMB di Sektor XIV BSD City.')
 
 @section('content')
 @php
-    $schoolName = $profile->name ?? 'SMP Al-Madinah BSD';
+    $schoolName = $profile->name ?? 'SMA Al-Madinah BSD';
     $foundation = 'Islamic Center KKMB • Sektor XIV BSD';
     $headmasterPhoto = !empty($profile?->headmaster_photo) 
         ? (Str::startsWith($profile->headmaster_photo, ['http://', 'https://']) ? $profile->headmaster_photo : asset('storage/' . $profile->headmaster_photo))
@@ -90,10 +90,10 @@
                 </h2>
                 <div class="text-xs sm:text-sm text-[#66676B] leading-relaxed space-y-3">
                     <p class="italic bg-[#F4F0F7] p-4 rounded-2xl border border-[#E3D9EC] text-[#202124]">
-                        "{{ $profile->headmaster_welcome ?? 'Selamat datang di portal resmi SMP Al-Madinah BSD. Kami bertekad mewujudkan lingkungan pendidikan yang menumbuhkan kecintaan terhadap Al-Qur\'an, ketajaman intelektual sains, serta keluhuran akhlak mulia.' }}"
+                        "{{ $profile->headmaster_welcome ?? 'Selamat datang di portal resmi SMA Al-Madinah BSD. Kami bertekad mewujudkan lingkungan pendidikan yang menumbuhkan kecintaan terhadap Al-Qur\'an, ketajaman intelektual sains, serta keluhuran akhlak mulia.' }}"
                     </p>
                     <p>
-                        {{ $profile->about ?? 'SMP Al-Madinah BSD berdiri di bawah naungan Yayasan Kerukunan Keluarga Muslim BSD (YKKM BSD) di kawasan asri Sektor XIV BSD City. Dengan mengusung konsep pendidikan terpadu, siswa dibimbing secara holistik mencakup aspek ruhiyah (spiritual), aqliyah (intelektual), dan jasadiyah (fisik).' }}
+                        {{ $profile->about ?? 'SMA Al-Madinah BSD berdiri di bawah naungan Yayasan Kerukunan Keluarga Muslim BSD (YKKM BSD) di kawasan asri Sektor XIV BSD City. Dengan mengusung konsep pendidikan terpadu, siswa dibimbing secara holistik mencakup aspek ruhiyah (spiritual), aqliyah (intelektual), dan jasadiyah (fisik).' }}
                     </p>
                 </div>
             </div>
@@ -171,13 +171,13 @@
 </section>
 @endif
 
-<!-- Sarana & Fasilitas SMP Al-Madinah Islamic Center KKMB -->
+<!-- Sarana & Fasilitas SMA Al-Madinah Islamic Center KKMB -->
 @if (isset($facilities) && $facilities->isNotEmpty())
 <section class="py-16 bg-white border-b border-[#E7E3EA]">
     <div class="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         <div class="text-center max-w-xl mx-auto space-y-1.5">
             <span class="text-xs font-bold uppercase tracking-wider text-[#9377AD]">SARANA & PRASARANA</span>
-            <h2 class="text-2xl font-extrabold text-[#202124] tracking-tight">Fasilitas SMP Al-Madinah Islamic Center KKMB</h2>
+            <h2 class="text-2xl font-extrabold text-[#202124] tracking-tight">Fasilitas SMA Al-Madinah Islamic Center KKMB</h2>
             <p class="text-xs text-[#66676B]">Sarana dan prasarana terstandarisasi untuk menunjang kegiatan belajar mengajar, ibadah harian, dan pengembangan potensi santri.</p>
         </div>
 
@@ -250,12 +250,12 @@
 </section>
 @endif
 
-<!-- Lokasi & Peta SMP Al-Madinah Islamic Center KKMB -->
+<!-- Lokasi & Peta SMA Al-Madinah Islamic Center KKMB -->
 <section class="py-16 bg-[#FAF9FB]">
     <div class="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         <div class="text-center max-w-xl mx-auto space-y-1.5">
-            <span class="text-xs font-bold uppercase tracking-wider text-[#9377AD]">LOKASI SMP AL-MADINAH ISLAMIC CENTER KKMB</span>
-            <h2 class="text-2xl font-extrabold text-[#202124] tracking-tight">Kunjungi SMP Al-Madinah Islamic Center KKMB</h2>
+            <span class="text-xs font-bold uppercase tracking-wider text-[#9377AD]">LOKASI SMA AL-MADINAH ISLAMIC CENTER KKMB</span>
+            <h2 class="text-2xl font-extrabold text-[#202124] tracking-tight">Kunjungi SMA Al-Madinah Islamic Center KKMB</h2>
             <p class="text-xs text-[#66676B]">Buka petunjuk arah melalui Google Maps atau hubungi resepsionis kami.</p>
         </div>
 
@@ -267,7 +267,7 @@
                         <span class="w-7 h-7 rounded-xl bg-[#F4F0F7] text-[#9377AD] flex items-center justify-center">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                         </span>
-                        <span>Alamat SMP Al-Madinah Islamic Center KKMB</span>
+                        <span>Alamat SMA Al-Madinah Islamic Center KKMB</span>
                     </h3>
                     <p class="text-xs sm:text-sm text-[#66676B] mt-2 leading-relaxed">
                         {{ $profile?->address ?? 'Komplek BSD City Sektor XIV, Serpong, Kota Tangerang Selatan, Banten' }}

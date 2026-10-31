@@ -32,7 +32,7 @@ class LatestApplicantsWidget extends BaseWidget
                 TextColumn::make('full_name')
                     ->label('Nama Calon Siswa')
                     ->weight('semibold')
-                    ->description(fn (PpdbRegistration $record): string => 'SD: ' . ($record->origin_school ?? '-')),
+                    ->description(fn (PpdbRegistration $record): string => 'SMP: ' . ($record->origin_school ?? '-')),
 
                 TextColumn::make('gender')
                     ->label('L/P')

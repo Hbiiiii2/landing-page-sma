@@ -3,7 +3,7 @@
 # -------------------------------------------------------------
 FROM nginx:alpine
 
-LABEL maintainer="SMP Islam Al-Madinah BSD"
+LABEL maintainer="SMA Islam Al-Madinah BSD"
 
 # Copy Nginx server configuration
 COPY docker/nginx/default.conf /etc/nginx/conf.d/default.conf

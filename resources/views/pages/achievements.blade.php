@@ -1,11 +1,11 @@
 @extends('layouts.public')
 
-@section('title', 'Prestasi Siswa — SMP Islam Al-Madinah BSD')
-@section('meta_description', 'Daftar torehan prestasi akademik, tahfidz Al-Qur\'an, olimpiade sains, robotika, dan keolahragaan santri SMP Islam Al-Madinah BSD.')
+@section('title', 'Prestasi Siswa — SMA Islam Al-Madinah BSD')
+@section('meta_description', 'Daftar torehan prestasi akademik, tahfidz Al-Qur\'an, olimpiade sains, robotika, dan keolahragaan santri SMA Islam Al-Madinah BSD.')
 
 @section('content')
 @php
-    $schoolName = $profile->name ?? 'SMP Al-Madinah BSD';
+    $schoolName = $profile->name ?? 'SMA Al-Madinah BSD';
 @endphp
 
 <!-- Header Banner -->
@@ -18,7 +18,7 @@
             Prestasi & Kejuaraan Siswa
         </h1>
         <p class="text-xs sm:text-sm text-purple-100 max-w-xl mx-auto">
-            Capaian membanggakan siswa SMP Al-Madinah BSD di bidang tahfidz Al-Qur'an, sains, teknologi, dan keolahragaan.
+            Capaian membanggakan siswa SMA Al-Madinah BSD di bidang tahfidz Al-Qur'an, sains, teknologi, dan keolahragaan.
         </p>
     </div>
 </section>

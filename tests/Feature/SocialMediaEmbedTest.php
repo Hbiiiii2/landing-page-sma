@@ -13,7 +13,7 @@ class SocialMediaEmbedTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertSee('id="video-profil"', false);
-        $response->assertSee('Video Profil SMP Al-Madinah');
+        $response->assertSee('Video Profil SMA Al-Madinah');
         $response->assertSee('Instagram Resmi');
         $response->assertSee('Buka Channel YouTube');
         $response->assertSee('Lihat Instagram');

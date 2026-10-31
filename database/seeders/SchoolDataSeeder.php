@@ -28,23 +28,23 @@ class SchoolDataSeeder extends Seeder
         $admin = User::firstOrCreate([
             'email' => 'admin@smpalmadinah.sch.id',
         ], [
-            'name' => 'Administrator SMP Al-Madinah',
-            'slug' => 'administrator-smp-al-madinah',
+            'name' => 'Administrator SMA Al-Madinah',
+            'slug' => 'administrator-sma-al-madinah',
             'job_title' => 'Tim Humas & IT',
-            'company' => 'SMP Islam Al-Madinah BSD',
+            'company' => 'SMA Islam Al-Madinah BSD',
             'email_verified_at' => now(),
             'password' => Hash::make('password123'),
         ]);
 
-        // 1. Profil Sekolah (Akurat SMP Islam Al-Madinah BSD)
+        // 1. Profil Sekolah (Akurat SMA Islam Al-Madinah BSD)
         SchoolProfile::updateOrCreate(['id' => 1], [
-            'name' => 'SMP Islam Al-Madinah BSD',
+            'name' => 'SMA Islam Al-Madinah BSD',
             'npsn' => '20613809',
             'accreditation' => 'A (Unggul)',
             'tagline' => 'Mendidik dengan Adab, Membina dengan Ilmu, Menuju Generasi Rabbani Berwawasan Global',
             'headmaster_name' => 'H. Syaiful Bahri, M.Pd.I',
-            'headmaster_welcome' => 'Assalamu\'alaikum Warahmatullahi Wabarakatuh. Selamat datang di portal resmi SMP Islam Al-Madinah BSD. Di bawah naungan Yayasan Kerukunan Keluarga Muslim BSD (YKKM BSD), kami mendedikasikan diri untuk melahirkan generasi santri yang kokoh dalam akidah, mulia dalam akhlak, mutqin dalam hafalan Al-Qur\'an, serta unggul dalam literasi sains dan teknologi masa depan.',
-            'about' => 'SMP Islam Al-Madinah BSD merupakan institusi pendidikan menengah pertama unggulan di kawasan BSD City Tangerang Selatan. Memadukan kurikulum nasional merdeka dan kurikulum khas pesantren perkotaan dengan fokus pada adab Islami, tahfidz Al-Qur\'an 3 juz mutqin, program bilingual Arab-Inggris, dan riset sains teknologi modern.',
+            'headmaster_welcome' => 'Assalamu\'alaikum Warahmatullahi Wabarakatuh. Selamat datang di portal resmi SMA Islam Al-Madinah BSD. Di bawah naungan Yayasan Kerukunan Keluarga Muslim BSD (YKKM BSD), kami mendedikasikan diri untuk melahirkan generasi santri yang kokoh dalam akidah, mulia dalam akhlak, mutqin dalam hafalan Al-Qur\'an, serta unggul dalam literasi sains dan teknologi masa depan.',
+            'about' => 'SMA Islam Al-Madinah BSD merupakan institusi pendidikan menengah atas unggulan di kawasan BSD City Tangerang Selatan. Memadukan kurikulum nasional merdeka dan kurikulum khas pesantren perkotaan dengan fokus pada adab Islami, tahfidz Al-Qur\'an 3 juz mutqin, program bilingual Arab-Inggris, dan riset sains teknologi modern.',
             'vision' => 'Terwujudnya Generasi Rabbani yang Berakhlakul Karimah, Unggul dalam Prestasi, Menguasai IPTEK, dan Berwawasan Global Berlandaskan Nilai-Nilai Al-Qur\'an.',
             'mission' => "1. Menumbuhkan penghayatan aqidah yang lurus dan pembiasaan ibadah berlandaskan adab Islami.\n2. Mengoptimalkan program tahfidz Al-Qur'an minimal 3 juz mutqin dengan bimbingan bersanad.\n3. Menyelenggarakan pembelajaran saintifik dan teknologi komputasi berbasis kurikulum modern.\n4. Membiasakan komunikasi aktif dwibahasa (Arab & Inggris) dalam pergaulan harian.\n5. Mengembangkan minat, bakat, kepemimpinan, dan kepedulian sosial santri.",
             'address' => 'Komplek BSD City Sektor XIV, Serpong, Kota Tangerang Selatan, Banten 15310',
@@ -93,7 +93,7 @@ class SchoolDataSeeder extends Seeder
                 'address' => 'BSD City Sektor 1.2 Blok B No. 15, Serpong, Tangerang Selatan',
                 'student_phone' => '081299112233',
                 'student_email' => 'fatih.rayhan@gmail.com',
-                'origin_school' => 'SD Islam Al-Azhar BSD',
+                'origin_school' => 'SMP Islam Al-Azhar BSD',
                 'parent_name' => 'H. Agus Pratama, S.T.',
                 'parent_phone' => '081299887766',
                 'parent_job' => 'Wiraswasta',
@@ -114,12 +114,12 @@ class SchoolDataSeeder extends Seeder
                 'address' => 'Cluster Nusa Loka Sektor 14 BSD City, Tangerang Selatan',
                 'student_phone' => '081388223344',
                 'student_email' => 'aisyah.zahra@gmail.com',
-                'origin_school' => 'SDIT Al-Fath BSD',
+                'origin_school' => 'SMPIT Al-Fath BSD',
                 'parent_name' => 'Dr. H. Hendra Wijaya, Sp.A.',
                 'parent_phone' => '081388776655',
                 'parent_job' => 'Dokter Spesialis',
                 'status' => 'accepted',
-                'verification_notes' => 'LULUS Seleksi Observasi & Tahfidz. Selamat bergabung di keluarga besar SMP Al-Madinah BSD.',
+                'verification_notes' => 'LULUS Seleksi Observasi & Tahfidz. Selamat bergabung di keluarga besar SMA Al-Madinah BSD.',
                 'verified_at' => now()->subDays(2),
             ],
             [
@@ -135,7 +135,7 @@ class SchoolDataSeeder extends Seeder
                 'address' => 'Griya Loka Sektor 1.1 Blok E No. 8, Serpong',
                 'student_phone' => '081577334455',
                 'student_email' => 'dzaki.ghifari@gmail.com',
-                'origin_school' => 'SD Islam Cikal Harapan',
+                'origin_school' => 'SMP Islam Cikal Harapan',
                 'parent_name' => 'Ir. Muhammad Firdaus',
                 'parent_phone' => '081577889900',
                 'parent_job' => 'Pegawai Swasta',
@@ -156,7 +156,7 @@ class SchoolDataSeeder extends Seeder
                 'address' => 'De Latinos Cluster Carribean BSD City, Tangerang Selatan',
                 'student_phone' => '081699445566',
                 'student_email' => 'khansa.zahra@gmail.com',
-                'origin_school' => 'SDIT Insan Mandiri',
+                'origin_school' => 'SMPIT Insan Mandiri',
                 'parent_name' => 'Dedi Gunawan, S.E.',
                 'parent_phone' => '081699001122',
                 'parent_job' => 'Manajer Keuangan',
@@ -364,14 +364,14 @@ class SchoolDataSeeder extends Seeder
                 'is_featured' => true,
             ],
             [
-                'title' => 'Juara Umum Kejuaraan Futsal Pelajar SMP Se-Tangerang Selatan',
-                'student_name' => 'Tim Futsal SMP Islam Al-Madinah BSD',
+                'title' => 'Juara Umum Kejuaraan Futsal Pelajar SMA Se-Tangerang Selatan',
+                'student_name' => 'Tim Futsal SMA Islam Al-Madinah BSD',
                 'category' => 'olahraga',
                 'level' => 'kabupaten',
                 'rank' => 'Juara 1 Umum',
                 'year' => 2025,
                 'organizer' => 'Dispora Kota Tangerang Selatan',
-                'description' => 'Menjuarai turnamen tahunan antar-SMP se-Tangerang Selatan dengan rekor tak terkalahkan di babak penyisihan.',
+                'description' => 'Menjuarai turnamen tahunan antar-SMA se-Tangerang Selatan dengan rekor tak terkalahkan di babak penyisihan.',
                 'is_featured' => false,
             ],
             [
@@ -495,17 +495,17 @@ class SchoolDataSeeder extends Seeder
                 'category_slug' => 'pengumuman',
                 'is_featured' => 1,
                 'published_at' => now()->subDays(1),
-                'excerpt' => 'SMP Islam Al-Madinah BSD secara resmi membuka pendaftaran peserta didik baru tahun ajaran 2027/2028 dengan kuota terbatas 120 kursi.',
-                'content' => '<p>SMP Islam Al-Madinah BSD di bawah naungan Yayasan Kerukunan Keluarga Muslim BSD (YKKM BSD) resmi membuka Penerimaan Peserta Didik Baru (PPDB) untuk Tahun Ajaran 2027/2028.</p><p>Demi menjaga efektivitas pembinaan tahfidz Al-Qur\'an dan pendekatan personal guru terhadap santri, kuota penerimaan tahun ini dibatasi hanya untuk 120 siswa (5 rombel, maksimal 24 santri per kelas).</p><h3>Jalur Penerimaan:</h3><ul><li><strong>Jalur Reguler:</strong> Melalui tes pemetaan akademik dasar dan observasi potensi karakter.</li><li><strong>Jalur Prestasi Tahfidz:</strong> Khusus santri yang memiliki hafalan minimal 2 Juz Al-Qur\'an mutqin.</li><li><strong>Jalur Prestasi Akademik & Sains:</strong> Untuk peraih juara 1-3 OSN atau kompetisi setingkat.</li></ul><p>Pendaftaran dapat dilakukan secara online melalui portal resmi PPDB atau langsung berkunjung ke kantor sekretariat PPDB Komplek BSD City Sektor XIV.</p>',
+                'excerpt' => 'SMA Islam Al-Madinah BSD secara resmi membuka pendaftaran peserta didik baru tahun ajaran 2027/2028 dengan kuota terbatas 120 kursi.',
+                'content' => '<p>SMA Islam Al-Madinah BSD di bawah naungan Yayasan Kerukunan Keluarga Muslim BSD (YKKM BSD) resmi membuka Penerimaan Peserta Didik Baru (PPDB) untuk Tahun Ajaran 2027/2028.</p><p>Demi menjaga efektivitas pembinaan tahfidz Al-Qur\'an dan pendekatan personal guru terhadap santri, kuota penerimaan tahun ini dibatasi hanya untuk 120 siswa (5 rombel, maksimal 24 santri per kelas).</p><h3>Jalur Penerimaan:</h3><ul><li><strong>Jalur Reguler:</strong> Melalui tes pemetaan akademik dasar dan observasi potensi karakter.</li><li><strong>Jalur Prestasi Tahfidz:</strong> Khusus santri yang memiliki hafalan minimal 2 Juz Al-Qur\'an mutqin.</li><li><strong>Jalur Prestasi Akademik & Sains:</strong> Untuk peraih juara 1-3 OSN atau kompetisi setingkat.</li></ul><p>Pendaftaran dapat dilakukan secara online melalui portal resmi PPDB atau langsung berkunjung ke kantor sekretariat PPDB Komplek BSD City Sektor XIV.</p>',
             ],
             [
-                'title' => 'Santri SMP Islam Al-Madinah BSD Raih Juara 1 Olimpiade Sains & Riset Tingkat Provinsi',
-                'slug' => 'santri-smp-al-madinah-raih-juara-1-olimpiade-sains-provinsi',
+                'title' => 'Santri SMA Islam Al-Madinah BSD Raih Juara 1 Olimpiade Sains & Riset Tingkat Provinsi',
+                'slug' => 'santri-sma-al-madinah-raih-juara-1-olimpiade-sains-provinsi',
                 'category_slug' => 'prestasi',
                 'is_featured' => 1,
                 'published_at' => now()->subDays(3),
-                'excerpt' => 'Kabar membanggakan datang dari santri SMP Al-Madinah BSD yang berhasil meraih medali emas pada ajang bergengsi Olimpiade Sains Pelajar.',
-                'content' => '<p>Alhamdulillah, puji syukur ke hadirat Allah SWT. Santri SMP Islam Al-Madinah BSD atas nama Muhammad Rayyan Zhafir berhasil menorehkan prestasi gemilang dengan meraih Medali Emas (Juara 1) pada ajang Olimpiade Sains Pelajar tingkat Provinsi Banten.</p><p>Prestasi ini merupakan buah dari ketekunan santri dalam mengikuti bimbingan intensif Smart Science Club serta doa dan dukungan penuh dari dewan asatidz dan para wali santri.</p><p>Kepala Sekolah menyampaikan rasa syukur dan apresiasi yang mendalam atas pencapaian ini, yang membuktikan bahwa pendidikan berbasis adab dan Al-Qur\'an mampu berjalan beriringan dengan keunggulan sains modern.</p>',
+                'excerpt' => 'Kabar membanggakan datang dari santri SMA Al-Madinah BSD yang berhasil meraih medali emas pada ajang bergengsi Olimpiade Sains Pelajar.',
+                'content' => '<p>Alhamdulillah, puji syukur ke hadirat Allah SWT. Santri SMA Islam Al-Madinah BSD atas nama Muhammad Rayyan Zhafir berhasil menorehkan prestasi gemilang dengan meraih Medali Emas (Juara 1) pada ajang Olimpiade Sains Pelajar tingkat Provinsi Banten.</p><p>Prestasi ini merupakan buah dari ketekunan santri dalam mengikuti bimbingan intensif Smart Science Club serta doa dan dukungan penuh dari dewan asatidz dan para wali santri.</p><p>Kepala Sekolah menyampaikan rasa syukur dan apresiasi yang mendalam atas pencapaian ini, yang membuktikan bahwa pendidikan berbasis adab dan Al-Qur\'an mampu berjalan beriringan dengan keunggulan sains modern.</p>',
             ],
             [
                 'title' => 'Tasmi\' Akbar 3 Juz Sekali Duduk dan Munaqasyah Tahfidz Al-Qur\'an Angkatan X',
@@ -514,16 +514,16 @@ class SchoolDataSeeder extends Seeder
                 'is_featured' => 0,
                 'published_at' => now()->subDays(6),
                 'excerpt' => 'Sebanyak 35 santri mengikuti Tasmi\' Akbar hafalan 3 Juz Al-Qur\'an sekali duduk di Masjid Jami\' Islamic Center KKMB BSD.',
-                'content' => '<p>Suasana haru dan khidmat menyelimuti Masjid Jami\' Islamic Center KKMB BSD saat diselenggarakannya agenda Tasmi\' Akbar dan Munaqasyah Tahfidz Al-Qur\'an Angkatan X SMP Islam Al-Madinah BSD.</p><p>Sebanyak 35 santri berhasil memperdengarkan hafalan Al-Qur\'an secara mutqin sekali duduk di hadapan dewan penguji bersanad dan disaksikan langsung oleh para orang tua santri.</p><p>Koordinator Program Tahfidz menuturkan bahwa target 3 Juz mutqin selama menempuh jenjang SMP bukan sekadar mengejar kuantitas hafalan, melainkan menanamkan kecintaan mendalam terhadap Al-Qur\'an dan akhlak yang mulia.</p>',
+                'content' => '<p>Suasana haru dan khidmat menyelimuti Masjid Jami\' Islamic Center KKMB BSD saat diselenggarakannya agenda Tasmi\' Akbar dan Munaqasyah Tahfidz Al-Qur\'an Angkatan X SMA Islam Al-Madinah BSD.</p><p>Sebanyak 35 santri berhasil memperdengarkan hafalan Al-Qur\'an secara mutqin sekali duduk di hadapan dewan penguji bersanad dan disaksikan langsung oleh para orang tua santri.</p><p>Koordinator Program Tahfidz menuturkan bahwa target 3 Juz mutqin selama menempuh jenjang SMA bukan sekadar mengejar kuantitas hafalan, melainkan menanamkan kecintaan mendalam terhadap Al-Qur\'an dan akhlak yang mulia.</p>',
             ],
             [
-                'title' => 'Laporan Rekapitulasi Realisasi Penggunaan Dana BOSP SMP Islam Al-Madinah BSD',
+                'title' => 'Laporan Rekapitulasi Realisasi Penggunaan Dana BOSP SMA Islam Al-Madinah BSD',
                 'slug' => 'laporan-rekapitulasi-realisasi-penggunaan-dana-bosp',
                 'category_slug' => 'dana-bosp',
                 'is_featured' => 0,
                 'published_at' => now()->subDays(8),
-                'excerpt' => 'Sebagai wujud akuntabilitas dan transparansi tata kelola sekolah, SMP Islam Al-Madinah mempublikasikan laporan pemanfaatan Dana BOSP.',
-                'content' => '<p>Sebagai wujud komitmen terhadap prinsip Good School Governance, keterbukaan informasi publik, dan akuntabilitas pengelolaan anggaran pendidikan, manajemen SMP Islam Al-Madinah BSD mempublikasikan rekapitulasi realisasi penggunaan Dana BOSP (Bantuan Operasional Satuan Pendidikan) Tahun Anggaran Berjalan.</p><p>Alokasi dana difokuskan pada:</p><ol><li>Penyediaan buku teks dan referensi e-library bagi santri.</li><li>Peningkatan kapasitas sarana laboratorium komputer CBT.</li><li>Pemeliharaan sanitasi dan kebersihan lingkungan sekolah sehat.</li><li>Pengembangan kompetensi profesional guru dan tenaga kependidikan.</li></ol><p>Dokumen rekapitulasi lengkap dapat diakses secara transparan oleh wali santri dan masyarakat di papan pengumuman resmi sekolah.</p>',
+                'excerpt' => 'Sebagai wujud akuntabilitas dan transparansi tata kelola sekolah, SMA Islam Al-Madinah mempublikasikan laporan pemanfaatan Dana BOSP.',
+                'content' => '<p>Sebagai wujud komitmen terhadap prinsip Good School Governance, keterbukaan informasi publik, dan akuntabilitas pengelolaan anggaran pendidikan, manajemen SMA Islam Al-Madinah BSD mempublikasikan rekapitulasi realisasi penggunaan Dana BOSP (Bantuan Operasional Satuan Pendidikan) Tahun Anggaran Berjalan.</p><p>Alokasi dana difokuskan pada:</p><ol><li>Penyediaan buku teks dan referensi e-library bagi santri.</li><li>Peningkatan kapasitas sarana laboratorium komputer CBT.</li><li>Pemeliharaan sanitasi dan kebersihan lingkungan sekolah sehat.</li><li>Pengembangan kompetensi profesional guru dan tenaga kependidikan.</li></ol><p>Dokumen rekapitulasi lengkap dapat diakses secara transparan oleh wali santri dan masyarakat di papan pengumuman resmi sekolah.</p>',
             ],
             [
                 'title' => 'Peringatan Hari Guru Nasional: Apresiasi Pendidik Berdedikasi Yayasan KKMB BSD',
@@ -531,8 +531,8 @@ class SchoolDataSeeder extends Seeder
                 'category_slug' => 'warta-sekolah',
                 'is_featured' => 0,
                 'published_at' => now()->subDays(12),
-                'excerpt' => 'Rangkaian upacara dan pemberian penghargaan bagi guru berprestasi serta berdedikasi tinggi di lingkungan SMP Al-Madinah BSD.',
-                'content' => '<p>Dalam rangka memperingati Hari Guru Nasional, keluarga besar SMP Islam Al-Madinah BSD menyelenggarakan upacara bendera khusus yang seluruh petugas upacaranya adalah dewan guru dan tenaga kependidikan.</p><p>Acara dilanjutkan dengan ramah tamah, persembahan puisi dari OSIS santri, serta penyerahan piagam Guru Teladan dan Anugerah Pendidik Inspiratif Yayasan KKMB BSD.</p>',
+                'excerpt' => 'Rangkaian upacara dan pemberian penghargaan bagi guru berprestasi serta berdedikasi tinggi di lingkungan SMA Al-Madinah BSD.',
+                'content' => '<p>Dalam rangka memperingati Hari Guru Nasional, keluarga besar SMA Islam Al-Madinah BSD menyelenggarakan upacara bendera khusus yang seluruh petugas upacaranya adalah dewan guru dan tenaga kependidikan.</p><p>Acara dilanjutkan dengan ramah tamah, persembahan puisi dari OSIS santri, serta penyerahan piagam Guru Teladan dan Anugerah Pendidik Inspiratif Yayasan KKMB BSD.</p>',
             ],
             [
                 'title' => 'Workshop Robotika dan Coding: Melatih Pemikiran Komputasional Santri di Era AI',
@@ -540,8 +540,8 @@ class SchoolDataSeeder extends Seeder
                 'category_slug' => 'akademik',
                 'is_featured' => 0,
                 'published_at' => now()->subDays(15),
-                'excerpt' => 'Santri kelas 7 dan 8 antusias mengikuti workshop pengenalan sensor robotik dan logika algoritma dasar di lab multimedia.',
-                'content' => '<p>Laboratorium Komputer SMP Islam Al-Madinah BSD dipenuhi antusiasme santri yang mengikuti Workshop Robotika & Coding. Kegiatan ini bertujuan memperkenalkan computational thinking, logika pemrograman dasar, dan teknologi mikrokontroler.</p><p>Para santri dipandu merakit robot sederhana yang dapat bergerak mendeteksi garis (line follower) dan menghindari halangan secara mandiri.</p>',
+                'excerpt' => 'Santri kelas 10 dan 11 antusias mengikuti workshop pengenalan sensor robotik dan logika algoritma dasar di lab multimedia.',
+                'content' => '<p>Laboratorium Komputer SMA Islam Al-Madinah BSD dipenuhi antusiasme santri yang mengikuti Workshop Robotika & Coding. Kegiatan ini bertujuan memperkenalkan computational thinking, logika pemrograman dasar, dan teknologi mikrokontroler.</p><p>Para santri dipandu merakit robot sederhana yang dapat bergerak mendeteksi garis (line follower) dan menghindari halangan secara mandiri.</p>',
             ],
             [
                 'title' => 'Field Trip Edukatif Sains Lingkungan dan Teknologi Hijau ke Puspiptek Serpong',
@@ -550,7 +550,7 @@ class SchoolDataSeeder extends Seeder
                 'is_featured' => 0,
                 'published_at' => now()->subDays(20),
                 'excerpt' => 'Santri mendalami aplikasi energi terbarukan dan riset bioteknologi langsung bersama para peneliti ahli di kawasan Puspiptek.',
-                'content' => '<p>Menghubungkan teori buku dengan aplikasi riil di lapangan, santri SMP Islam Al-Madinah BSD mengadakan kunjungan edukatif (field trip) ke kawasan riset Puspiptek Serpong.</p><p>Santri berkesempatan mengunjungi reaktor riset, laboratorium teknologi bahan, dan instalasi energi surya terbarukan.</p>',
+                'content' => '<p>Menghubungkan teori buku dengan aplikasi riil di lapangan, santri SMA Islam Al-Madinah BSD mengadakan kunjungan edukatif (field trip) ke kawasan riset Puspiptek Serpong.</p><p>Santri berkesempatan mengunjungi reaktor riset, laboratorium teknologi bahan, dan instalasi energi surya terbarukan.</p>',
             ],
             [
                 'title' => 'Latihan Gabungan Kepramukaan Gugus Depan Al-Madinah dan Pembiasaan Disiplin',
@@ -558,8 +558,8 @@ class SchoolDataSeeder extends Seeder
                 'category_slug' => 'ekstrakurikuler',
                 'is_featured' => 0,
                 'published_at' => now()->subDays(25),
-                'excerpt' => 'Gugus Depan SMP Al-Madinah menggelar latihan gabungan teknik kepramukaan, pionering, dan penjelajahan alam.',
-                'content' => '<p>Kegiatan ekstrakurikuler wajib Pramuka Gugus Depan SMP Islam Al-Madinah BSD berlangsung penuh semangat di halaman SMP Al-Madinah Islamic Center KKMB.</p><p>Latihan gabungan ini melatih ketangkasan sandi morse, semaphore, tali-temali pionering, serta penanaman karakter disiplin dan gotong royong.</p>',
+                'excerpt' => 'Gugus Depan SMA Al-Madinah menggelar latihan gabungan teknik kepramukaan, pionering, dan penjelajahan alam.',
+                'content' => '<p>Kegiatan ekstrakurikuler wajib Pramuka Penegak Gugus Depan SMA Islam Al-Madinah BSD berlangsung penuh semangat di halaman SMA Al-Madinah Islamic Center KKMB.</p><p>Latihan gabungan ini melatih ketangkasan sandi morse, semaphore, tali-temali pionering, serta penanaman karakter disiplin dan gotong royong.</p>',
             ],
             [
                 'title' => 'Kajian Parenting Bersama Psikolog: Sinergi Mendidik Adab Anak di Era Digital',
@@ -568,7 +568,7 @@ class SchoolDataSeeder extends Seeder
                 'is_featured' => 0,
                 'published_at' => now()->subDays(30),
                 'excerpt' => 'Pertemuan rutin komite sekolah dan wali santri membahas kiat pendampingan gawai dan penguatan adab Islami di rumah.',
-                'content' => '<p>Sebagai bentuk kemitraan strategis antara sekolah dan keluarga, SMP Islam Al-Madinah BSD menyelenggarakan seminar parenting berkala bertema "Membangun Ketahanan Mental dan Adab Anak Menghadapi Arus Digital".</p><p>Acara dihadiri lebih dari 200 wali santri dengan narasumber psikolog pendidikan anak.</p>',
+                'content' => '<p>Sebagai bentuk kemitraan strategis antara sekolah dan keluarga, SMA Islam Al-Madinah BSD menyelenggarakan seminar parenting berkala bertema "Membangun Ketahanan Mental dan Adab Anak Menghadapi Arus Digital".</p><p>Acara dihadiri lebih dari 200 wali santri dengan narasumber psikolog pendidikan anak.</p>',
             ],
         ];
 
@@ -581,7 +581,7 @@ class SchoolDataSeeder extends Seeder
             $post->setTranslation('slug', 'en', $pData['slug']);
             $post->setTranslation('excerpt', 'en', $pData['excerpt']);
             $post->setTranslation('content', 'en', $pData['content']);
-            $post->setTranslation('meta_title', 'en', $pData['title'] . ' | SMP Al-Madinah BSD');
+            $post->setTranslation('meta_title', 'en', $pData['title'] . ' | SMA Al-Madinah BSD');
             $post->setTranslation('meta_description', 'en', $pData['excerpt']);
             $post->search_content = strip_tags($pData['title'] . ' ' . $pData['excerpt'] . ' ' . $pData['content']);
             $post->status = 'published';
@@ -707,7 +707,7 @@ class SchoolDataSeeder extends Seeder
                 'end_date' => now()->addDays(18)->setTime(14, 0),
                 'location' => 'Masjid Jami\' Islamic Center KKMB BSD',
                 'organizer' => 'Koordinator Tahfidz Al-Madinah',
-                'description' => 'Penyampaian hafalan santri kelas 9 di hadapan para penguji bersanad dan para wali santri.',
+                'description' => 'Penyampaian hafalan santri kelas 12 di hadapan para penguji bersanad dan para wali santri.',
                 'is_active' => true,
             ],
             [
@@ -715,7 +715,7 @@ class SchoolDataSeeder extends Seeder
                 'slug' => 'penilaian-sumatif-tengah-semester-cbt',
                 'start_date' => now()->addDays(30)->setTime(7, 0),
                 'end_date' => now()->addDays(36)->setTime(13, 0),
-                'location' => 'SMP Al-Madinah Islamic Center KKMB',
+                'location' => 'SMA Al-Madinah Islamic Center KKMB',
                 'organizer' => 'Tim Kurikulum Al-Madinah',
                 'description' => 'Evaluasi capaian pembelajaran berbasis perangkat komputer dan tablet edukasi terintegrasi.',
                 'is_active' => true,
@@ -740,14 +740,14 @@ class SchoolDataSeeder extends Seeder
         $announcements = [
             [
                 'title' => 'Pendaftaran PPDB Online Tahun Ajaran 2027/2028 Resmi Dibuka!',
-                'message' => 'Penerimaan Peserta Didik Baru (PPDB) SMP Islam Al-Madinah BSD telah dibuka dengan kuota terbatas 120 siswa. Segera daftarkan ananda sekarang.',
+                'message' => 'Penerimaan Peserta Didik Baru (PPDB) SMA Islam Al-Madinah BSD telah dibuka dengan kuota terbatas 120 siswa. Segera daftarkan ananda sekarang.',
                 'url' => route('ppdb.index'),
                 'type' => 'success',
                 'is_active' => true,
             ],
             [
                 'title' => 'Jadwal Tes Pemetaan Potensi dan Wawancara Gelombang 1',
-                'message' => 'Tes pemetaan potensi akademik dan observasi tahfidz Gelombang 1 dijadwalkan pada hari Sabtu pukul 08.00 WIB di SMP Al-Madinah Islamic Center KKMB.',
+                'message' => 'Tes pemetaan potensi akademik dan observasi tahfidz Gelombang 1 dijadwalkan pada hari Sabtu pukul 08.00 WIB di SMA Al-Madinah Islamic Center KKMB.',
                 'url' => route('ppdb.check-status'),
                 'type' => 'info',
                 'is_active' => true,

@@ -45,7 +45,7 @@ class ViewPpdbRegistration extends ViewRecord
                 ->color('success')
                 ->requiresConfirmation()
                 ->modalHeading('Luluskan Siswa Baru')
-                ->modalDescription('Siswa ini akan dinyatakan DITERIMA / LULUS seleksi PPDB SMP Al-Madinah.')
+                ->modalDescription('Siswa ini akan dinyatakan DITERIMA / LULUS seleksi PPDB SMA Al-Madinah.')
                 ->action(function (PpdbRegistration $record) {
                     $record->update([
                         'status' => 'accepted',
@@ -93,7 +93,7 @@ class ViewPpdbRegistration extends ViewRecord
                 ->color('success')
                 ->url(function (PpdbRegistration $record): string {
                     $phone = preg_replace('/[^0-9]/', '', $record->parent_phone);
-                    $text = urlencode("Assalamu'alaikum Wr. Wb. Bpk/Ibu wali dari ananda *{$record->full_name}* (No. Registrasi: *{$record->registration_number}*). Kami dari Panitia PPDB SMP Al-Madinah menginformasikan terkait pendaftaran...");
+                    $text = urlencode("Assalamu'alaikum Wr. Wb. Bpk/Ibu wali dari ananda *{$record->full_name}* (No. Registrasi: *{$record->registration_number}*). Kami dari Panitia PPDB SMA Al-Madinah menginformasikan terkait pendaftaran...");
                     return "https://wa.me/{$phone}?text={$text}";
                 }, true),
 

@@ -27,7 +27,7 @@ return new class extends Migration
             $table->text('address');
             $table->string('student_phone')->nullable();
             $table->string('student_email')->nullable();
-            $table->string('origin_school')->nullable(); // Asal SD/MI
+            $table->string('origin_school')->nullable(); // Asal SMP/MTs
 
             // Data Orang Tua
             $table->string('parent_name');
@@ -44,7 +44,7 @@ return new class extends Migration
             // Berkas Pelengkap (Dukungan PDF & Gambar)
             $table->string('family_card_file')->nullable()->comment('Kartu Keluarga (PDF/Gambar)');
             $table->string('birth_certificate_file')->nullable()->comment('Akta Kelahiran (PDF/Gambar)');
-            $table->string('graduation_certificate_file')->nullable()->comment('Ijazah/SKL SD (PDF/Gambar)');
+            $table->string('graduation_certificate_file')->nullable()->comment('Ijazah/SKL SMP (PDF/Gambar)');
             $table->string('student_photo_file')->nullable()->comment('Pas Foto Siswa (Gambar)');
             $table->string('achievement_certificate_file')->nullable()->comment('Piagam Prestasi (Opsional)');
             $table->json('additional_documents')->nullable()->comment('Berkas tambahan lainnya');

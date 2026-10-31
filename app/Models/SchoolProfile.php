@@ -17,7 +17,7 @@ class SchoolProfile extends Model
     public static function current(): self
     {
         return static::firstOrCreate([], [
-            'name' => 'SMP Al-Madinah',
+            'name' => 'SMA Al-Madinah',
             'accreditation' => 'A',
             'tagline' => 'Membentuk Generasi Berkarakter, Cerdas, dan Berakhlak Mulia',
             'statistic_students' => 350,
@@ -188,7 +188,7 @@ class SchoolProfile extends Model
 
     public function getWhatsappPanitiaUrlAttribute(): string
     {
-        $school = $this->name ?? 'SMP Al-Madinah';
+        $school = $this->name ?? 'SMA Al-Madinah';
         $defaultMsg = "Assalamu'alaikum Panitia PPDB {$school}, saya ingin konsultasi mengenai Penerimaan Santri Baru (PPDB). Mohon informasinya. Terima kasih.";
         $msg = !empty($this->whatsapp_message_panitia) ? $this->whatsapp_message_panitia : $defaultMsg;
         return $this->buildWhatsappUrl($this->whatsapp_ppdb_clean, $msg);
@@ -196,7 +196,7 @@ class SchoolProfile extends Model
 
     public function getWhatsappBrosurUrlAttribute(): string
     {
-        $school = $this->name ?? 'SMP Al-Madinah';
+        $school = $this->name ?? 'SMA Al-Madinah';
         $defaultMsg = "Assalamu'alaikum Panitia PPDB {$school}, saya ingin meminta berkas Brosur Resmi PPDB. Mohon dikirimkan. Terima kasih.";
         $msg = !empty($this->whatsapp_message_brosur) ? $this->whatsapp_message_brosur : $defaultMsg;
         return $this->buildWhatsappUrl($this->whatsapp_ppdb_clean, $msg);
@@ -204,7 +204,7 @@ class SchoolProfile extends Model
 
     public function getWhatsappBiayaUrlAttribute(): string
     {
-        $school = $this->name ?? 'SMP Al-Madinah';
+        $school = $this->name ?? 'SMA Al-Madinah';
         $defaultMsg = "Assalamu'alaikum Panitia PPDB {$school}, saya ingin menanyakan rincian Biaya PPDB & SPP. Mohon informasinya. Terima kasih.";
         $msg = !empty($this->whatsapp_message_biaya) ? $this->whatsapp_message_biaya : $defaultMsg;
         return $this->buildWhatsappUrl($this->whatsapp_ppdb_clean, $msg);
@@ -212,7 +212,7 @@ class SchoolProfile extends Model
 
     public function getWhatsappFloatingUrlAttribute(): string
     {
-        $school = $this->name ?? 'SMP Al-Madinah';
+        $school = $this->name ?? 'SMA Al-Madinah';
         $defaultMsg = "Assalamu'alaikum Admin {$school}, saya ingin bertanya informasi pendaftaran dan kegiatan sekolah.";
         $msg = !empty($this->whatsapp_message_floating) ? $this->whatsapp_message_floating : $defaultMsg;
         return $this->buildWhatsappUrl($this->whatsapp_clean, $msg);
