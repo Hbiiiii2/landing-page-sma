@@ -117,7 +117,7 @@
                     </p>
                 </div>
 
-                <!-- 4 Action CTAs Bar (Features Required) -->
+                <!-- 4 Action CTAs Bar -->
                 <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-3">
                     <!-- Button 1: DAFTAR ONLINE -->
                     <a href="{{ route('ppdb.index') }}" 
@@ -167,17 +167,29 @@
                     </button>
                 </div>
 
-                <!-- Academic Pillar Tags -->
+                <!-- Academic Pillar Tags (Clean Design without Emojis) -->
                 <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-2 text-[11px] font-semibold text-slate-300">
-                    <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10">🎓 Sukses Jalur PTN / Kedinasan</span>
-                    <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10">🔬 Laboratorium Riset & AI</span>
-                    <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10">📖 Tahfidz Al-Qur'an 3-5 Juz</span>
-                    <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10">🌐 Dwibahasa (Arab - Inggris)</span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 border border-white/10">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                        <span>Sukses Jalur PTN & Kedinasan</span>
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 border border-white/10">
+                        <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
+                        <span>Laboratorium Riset & AI</span>
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 border border-white/10">
+                        <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                        <span>Tahfidz Al-Qur'an 3-5 Juz</span>
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 border border-white/10">
+                        <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                        <span>Dwibahasa (Arab - Inggris)</span>
+                    </span>
                 </div>
 
             </div>
 
-            <!-- Right Column: Visual Showcase with Layered Floating Badges -->
+            <!-- Right Column: Visual Showcase with Layered Floating Badges (Clean SVG Icons) -->
             <div class="lg:col-span-5 reveal-init reveal-right delay-150">
                 <div class="relative mx-auto max-w-md lg:max-w-none">
                     
@@ -203,8 +215,8 @@
 
                     <!-- Floating Badge 1: PTN Success Target (Top-Right) -->
                     <div class="absolute -top-5 -right-4 sm:-right-6 bg-slate-900/90 backdrop-blur-md border border-white/20 rounded-2xl p-3 sm:p-3.5 shadow-xl flex items-center gap-3 max-w-[210px] hidden sm:flex">
-                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 text-slate-950 flex items-center justify-center font-black text-lg shadow-sm shrink-0">
-                            🎓
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 text-slate-950 flex items-center justify-center font-black shadow-sm shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
                         </div>
                         <div class="text-left">
                             <div class="text-xs font-black text-white">Target 100%</div>
@@ -214,8 +226,8 @@
 
                     <!-- Floating Badge 2: Tahfidz Bersanad (Bottom-Left) -->
                     <div class="absolute -bottom-5 -left-4 sm:-left-6 bg-slate-900/90 backdrop-blur-md border border-white/20 rounded-2xl p-3 sm:p-3.5 shadow-xl flex items-center gap-3 max-w-[200px] hidden sm:flex">
-                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-teal-600 text-slate-950 flex items-center justify-center font-black text-lg shadow-sm shrink-0">
-                            📖
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-teal-600 text-slate-950 flex items-center justify-center font-black shadow-sm shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                         </div>
                         <div class="text-left">
                             <div class="text-xs font-black text-white">Tahfidz Mutqin</div>
@@ -368,8 +380,8 @@
                     </div>
                 @else
                     <div class="p-5 rounded-2xl bg-emerald-50/70 border border-emerald-200 text-left flex items-start gap-4">
-                        <div class="w-12 h-12 rounded-xl bg-red-100 text-red-600 flex items-center justify-center font-black text-xl shrink-0 shadow-xs">
-                            📄
+                        <div class="w-12 h-12 rounded-xl bg-red-100 text-red-600 flex items-center justify-center shrink-0 shadow-xs">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                         </div>
                         <div class="space-y-1">
                             <div class="text-xs font-extrabold text-[#0D6B57]">Dokumen Brosur Resmi (PDF)</div>
@@ -393,8 +405,8 @@
                 </div>
             @else
                 <div class="p-6 rounded-2xl bg-amber-50/80 border border-amber-200 text-center space-y-3">
-                    <div class="w-12 h-12 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center mx-auto text-xl">
-                        ℹ️
+                    <div class="w-12 h-12 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center mx-auto shadow-xs">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     </div>
                     <div class="space-y-1">
                         <div class="text-xs font-bold text-amber-900">Brosur Digital Sedang Diperbarui</div>
@@ -454,8 +466,8 @@
                     </div>
                 @else
                     <div class="p-5 rounded-2xl bg-emerald-50/70 border border-emerald-200 text-left flex items-start gap-4">
-                        <div class="w-12 h-12 rounded-xl bg-red-100 text-red-600 flex items-center justify-center font-black text-xl shrink-0 shadow-xs">
-                            📋
+                        <div class="w-12 h-12 rounded-xl bg-red-100 text-red-600 flex items-center justify-center shrink-0 shadow-xs">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
                         </div>
                         <div class="space-y-1">
                             <div class="text-xs font-extrabold text-[#0D6B57]">Dokumen Rincian Biaya Resmi (PDF)</div>
@@ -479,8 +491,8 @@
                 </div>
             @else
                 <div class="p-6 rounded-2xl bg-amber-50/80 border border-amber-200 text-center space-y-3">
-                    <div class="w-12 h-12 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center mx-auto text-xl">
-                        💰
+                    <div class="w-12 h-12 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center mx-auto shadow-xs">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
                     </div>
                     <div class="space-y-1">
                         <div class="text-xs font-bold text-amber-900">Konsultasi Rincian Biaya Pendidikan</div>
@@ -532,9 +544,15 @@
                         Program intensif persiapan SNBP, SNBT/UTBK, dan seleksi Perguruan Tinggi Kedinasan sejak kelas X dengan tryout berkala dan konseling minat bakat.
                     </p>
                 </div>
-                <ul class="text-[11px] text-slate-600 space-y-1 pt-1 border-t border-slate-100">
-                    <li class="flex items-center gap-1.5 text-emerald-700 font-semibold">✓ Kelas Sukses UTBK & TPS</li>
-                    <li class="flex items-center gap-1.5 text-emerald-700 font-semibold">✓ Portofolio Akademik & Minat</li>
+                <ul class="text-[11px] text-slate-600 space-y-1.5 pt-1 border-t border-slate-100">
+                    <li class="flex items-center gap-2 text-emerald-800 font-semibold">
+                        <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                        <span>Kelas Sukses UTBK & TPS</span>
+                    </li>
+                    <li class="flex items-center gap-2 text-emerald-800 font-semibold">
+                        <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                        <span>Portofolio Akademik & Minat</span>
+                    </li>
                 </ul>
             </div>
 
@@ -551,9 +569,15 @@
                         Inkubator Karya Ilmiah Remaja (KIR), praktikum sains lanjutan di laboratorium representatif, coding, serta pengenalan Artificial Intelligence.
                     </p>
                 </div>
-                <ul class="text-[11px] text-slate-600 space-y-1 pt-1 border-t border-slate-100">
-                    <li class="flex items-center gap-1.5 text-emerald-700 font-semibold">✓ Laboratorium Sains Modern</li>
-                    <li class="flex items-center gap-1.5 text-emerald-700 font-semibold">✓ Coding & Robotika AI</li>
+                <ul class="text-[11px] text-slate-600 space-y-1.5 pt-1 border-t border-slate-100">
+                    <li class="flex items-center gap-2 text-emerald-800 font-semibold">
+                        <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                        <span>Laboratorium Sains Modern</span>
+                    </li>
+                    <li class="flex items-center gap-2 text-emerald-800 font-semibold">
+                        <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                        <span>Coding & Robotika AI</span>
+                    </li>
                 </ul>
             </div>
 
@@ -570,9 +594,15 @@
                         Metode tahfidz mutqin berjenjang 3 hingga 5 juz, bimbingan talaqqi dari para asatidz muqri bersanad, serta ujian tasmi' akbar tahunan.
                     </p>
                 </div>
-                <ul class="text-[11px] text-slate-600 space-y-1 pt-1 border-t border-slate-100">
-                    <li class="flex items-center gap-1.5 text-emerald-700 font-semibold">✓ Halaqah Talaqqi Bersanad</li>
-                    <li class="flex items-center gap-1.5 text-emerald-700 font-semibold">✓ Pembiasaan Adab Salafush Shalih</li>
+                <ul class="text-[11px] text-slate-600 space-y-1.5 pt-1 border-t border-slate-100">
+                    <li class="flex items-center gap-2 text-emerald-800 font-semibold">
+                        <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                        <span>Halaqah Talaqqi Bersanad</span>
+                    </li>
+                    <li class="flex items-center gap-2 text-emerald-800 font-semibold">
+                        <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                        <span>Pembiasaan Adab Salafush Shalih</span>
+                    </li>
                 </ul>
             </div>
 
@@ -589,9 +619,15 @@
                         Kecakapan berkomunikasi aktif dwibahasa (Arab & Inggris), public speaking, kepemimpinan OSIS, dan partisipasi forum kepemudaan nasional.
                     </p>
                 </div>
-                <ul class="text-[11px] text-slate-600 space-y-1 pt-1 border-t border-slate-100">
-                    <li class="flex items-center gap-1.5 text-emerald-700 font-semibold">✓ English & Arabic Active Day</li>
-                    <li class="flex items-center gap-1.5 text-emerald-700 font-semibold">✓ Forum Diplomasi & OSIS</li>
+                <ul class="text-[11px] text-slate-600 space-y-1.5 pt-1 border-t border-slate-100">
+                    <li class="flex items-center gap-2 text-emerald-800 font-semibold">
+                        <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                        <span>English & Arabic Active Day</span>
+                    </li>
+                    <li class="flex items-center gap-2 text-emerald-800 font-semibold">
+                        <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                        <span>Forum Diplomasi & OSIS</span>
+                    </li>
                 </ul>
             </div>
 
@@ -626,35 +662,43 @@
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
                     <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1">
-                        <div class="flex items-center gap-2 font-bold text-xs text-slate-900">
-                            <span class="text-emerald-600 text-base">✓</span>
+                        <div class="flex items-center gap-2.5 font-bold text-xs text-slate-900">
+                            <div class="w-5 h-5 rounded-md bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                            </div>
                             <span>Kurikulum Merdeka Plus</span>
                         </div>
-                        <p class="text-[11px] text-slate-500 leading-relaxed">Terintegrasi bimbingan intensif persiapan seleksi perguruan tinggi negeri favorit.</p>
+                        <p class="text-[11px] text-slate-500 leading-relaxed pl-7">Terintegrasi bimbingan intensif persiapan seleksi perguruan tinggi negeri favorit.</p>
                     </div>
 
                     <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1">
-                        <div class="flex items-center gap-2 font-bold text-xs text-slate-900">
-                            <span class="text-emerald-600 text-base">✓</span>
+                        <div class="flex items-center gap-2.5 font-bold text-xs text-slate-900">
+                            <div class="w-5 h-5 rounded-md bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                            </div>
                             <span>Halaqah Tahfidz Bersanad</span>
                         </div>
-                        <p class="text-[11px] text-slate-500 leading-relaxed">Metode mutqin berjenjang dengan pembinaan talaqqi muqri bersanad resmi.</p>
+                        <p class="text-[11px] text-slate-500 leading-relaxed pl-7">Metode mutqin berjenjang dengan pembinaan talaqqi muqri bersanad resmi.</p>
                     </div>
 
                     <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1">
-                        <div class="flex items-center gap-2 font-bold text-xs text-slate-900">
-                            <span class="text-emerald-600 text-base">✓</span>
+                        <div class="flex items-center gap-2.5 font-bold text-xs text-slate-900">
+                            <div class="w-5 h-5 rounded-md bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                            </div>
                             <span>Laboratorium Riset & AI</span>
                         </div>
-                        <p class="text-[11px] text-slate-500 leading-relaxed">Inkubator Karya Ilmiah Remaja (KIR), coding, dan robotika aplikatif.</p>
+                        <p class="text-[11px] text-slate-500 leading-relaxed pl-7">Inkubator Karya Ilmiah Remaja (KIR), coding, dan robotika aplikatif.</p>
                     </div>
 
                     <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1">
-                        <div class="flex items-center gap-2 font-bold text-xs text-slate-900">
-                            <span class="text-emerald-600 text-base">✓</span>
+                        <div class="flex items-center gap-2.5 font-bold text-xs text-slate-900">
+                            <div class="w-5 h-5 rounded-md bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                            </div>
                             <span>Rasio Maksimal 24 Santri</span>
                         </div>
-                        <p class="text-[11px] text-slate-500 leading-relaxed">Setiap santri didampingi secara personal untuk memaksimalkan potensi uniknya.</p>
+                        <p class="text-[11px] text-slate-500 leading-relaxed pl-7">Setiap santri didampingi secara personal untuk memaksimalkan potensi uniknya.</p>
                     </div>
                 </div>
 
@@ -804,11 +848,7 @@
                 <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 hover:border-emerald-500 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
                     <div class="space-y-4">
                         <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-black text-lg group-hover:scale-110 transition-transform">
-                            @if(!empty($prog->icon))
-                                <span>{{ $prog->icon }}</span>
-                            @else
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
-                            @endif
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                         </div>
                         <div class="space-y-1.5">
                             <span class="text-[10px] uppercase font-bold text-emerald-700 tracking-wider">Jalur Peminatan SMA</span>
@@ -830,22 +870,30 @@
                 </div>
             @empty
                 <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 shadow-sm space-y-3">
-                    <span class="text-2xl">🔬</span>
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-800 flex items-center justify-center">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                    </div>
                     <h3 class="text-base font-black text-slate-900">MIPA & Riset Sains</h3>
                     <p class="text-xs text-slate-600 leading-relaxed">Persiapan Fakultas Kedokteran, Teknik, Farmasi, dan Sains Terapan.</p>
                 </div>
                 <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 shadow-sm space-y-3">
-                    <span class="text-2xl">📊</span>
+                    <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-800 flex items-center justify-center">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                    </div>
                     <h3 class="text-base font-black text-slate-900">IPS & Global Studies</h3>
                     <p class="text-xs text-slate-600 leading-relaxed">Fakultas Ekonomi, Hukum, Hubungan Internasional, dan Psikologi.</p>
                 </div>
                 <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 shadow-sm space-y-3">
-                    <span class="text-2xl">📖</span>
+                    <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                    </div>
                     <h3 class="text-base font-black text-slate-900">Tahfidz & Dirasah Islamiyah</h3>
                     <p class="text-xs text-slate-600 leading-relaxed">Studi Lanjutan Universitas Timur Tengah (Al-Azhar, Madinah) & Syariah.</p>
                 </div>
                 <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 shadow-sm space-y-3">
-                    <span class="text-2xl">🌐</span>
+                    <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-800 flex items-center justify-center">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                    </div>
                     <h3 class="text-base font-black text-slate-900">Bilingual & International Class</h3>
                     <p class="text-xs text-slate-600 leading-relaxed">Pembelajaran dwibahasa dan sertifikasi TOEFL/IELTS & TOAFL.</p>
                 </div>
@@ -952,7 +1000,8 @@
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 reveal-init">
             <div class="space-y-2 max-w-xl">
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-amber-100 text-amber-800 border border-amber-200">
-                    🏆 Prestasi Santri SMA
+                    <svg class="w-3.5 h-3.5 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                    <span>Prestasi Santri SMA</span>
                 </span>
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight">
                     Rekam Jejak Kejuaraan & Prestasi
@@ -981,7 +1030,7 @@
 
                     <div class="flex items-center gap-3">
                         <div class="w-12 h-12 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center font-black text-xl shadow-md">
-                            🏅
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1z" clip-rule="evenodd"/></svg>
                         </div>
                         <div>
                             <span class="text-[10px] uppercase font-bold tracking-wider text-emerald-300">Etalase Prestasi</span>
@@ -1153,7 +1202,9 @@
                     @endforeach
                 @else
                     <div class="bg-slate-50 rounded-3xl border border-slate-200 p-8 text-center space-y-3">
-                        <div class="w-12 h-12 mx-auto rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center">🏆</div>
+                        <div class="w-12 h-12 mx-auto rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                        </div>
                         <h4 class="text-sm font-bold text-slate-900">Belum Ada Data Prestasi</h4>
                         <p class="text-xs text-slate-500">Data prestasi dapat dikelola melalui admin panel Filament.</p>
                     </div>
@@ -1378,7 +1429,7 @@
 
                                     <div :class="selected === {{ $index }} ? 'bg-emerald-600 text-white font-bold' : 'bg-slate-100 text-slate-600 font-semibold'"
                                          class="text-[10px] uppercase tracking-wider px-2.5 py-0.5 rounded-full flex items-center gap-1 transition-all duration-200">
-                                        <span x-text="selected === {{ $index }} ? '✓ Aktif' : 'Pilih'"></span>
+                                        <span x-text="selected === {{ $index }} ? 'Aktif' : 'Pilih'"></span>
                                     </div>
                                 </div>
 
@@ -1397,8 +1448,9 @@
 
                     <div class="pt-2 flex items-center justify-between text-xs text-slate-500">
                         <span>Tersedia {{ $extracurriculars->count() }} kegiatan ekstrakurikuler santri</span>
-                        <a href="{{ route('programs') }}" class="font-bold text-emerald-700 hover:underline">
-                            Jadwal Lengkap →
+                        <a href="{{ route('programs') }}" class="font-bold text-emerald-700 hover:underline flex items-center gap-1">
+                            <span>Jadwal Lengkap</span>
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                         </a>
                     </div>
                 </div>
@@ -1638,7 +1690,8 @@
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 reveal-init">
             <div class="space-y-2 max-w-xl">
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 border border-emerald-200">
-                    📰 Warta & Publikasi
+                    <svg class="w-3.5 h-3.5 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+                    <span>Warta & Publikasi</span>
                 </span>
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight">
                     Kabar Terkini SMA Al-Madinah
