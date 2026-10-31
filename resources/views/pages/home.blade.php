@@ -66,26 +66,54 @@
     <div class="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <!-- Top Announcement Ticker / Live Status -->
-        <div class="flex justify-center mb-6 sm:mb-8">
-            @if($announcements->isNotEmpty())
-                @php $topAnnouncement = $announcements->first(); @endphp
-                <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 hover:bg-white/15 backdrop-blur-md border border-white/20 text-xs text-white transition-all shadow-lg group max-w-xl">
-                    <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-emerald-500 text-slate-950 shrink-0">
-                        <span class="w-1.5 h-1.5 rounded-full bg-slate-950 animate-ping"></span>
-                        Info Resmi
-                    </span>
-                    <span class="truncate font-medium text-emerald-100">{{ $topAnnouncement->title }}</span>
-                    <svg class="w-3.5 h-3.5 text-emerald-400 group-hover:translate-x-0.5 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <div class="flex justify-center mb-6 sm:mb-8 px-2 sm:px-0">
+            @php
+                $hasAnnouncements = $announcements->isNotEmpty();
+                $topAnnouncement = $hasAnnouncements ? $announcements->first() : null;
+                $bannerTag = $hasAnnouncements ? 'INFO RESMI' : 'PPDB ' . $academicYear;
+                $bannerUrl = $topAnnouncement?->url ?? '#ppdb-jalur';
+                
+                if ($hasAnnouncements) {
+                    $tickerTitles = $announcements->pluck('title')->all();
+                    $tickerText = implode('   •   ', $tickerTitles);
+                } else {
+                    $tickerText = 'Pendaftaran PPDB Online Tahun Ajaran ' . $academicYear . ' Resmi Dibuka!';
+                }
+                $desktopTitle = $topAnnouncement ? $topAnnouncement->title : ('Pendaftaran PPDB Online Tahun Ajaran ' . $academicYear . ' Resmi Dibuka!');
+            @endphp
+
+            <a href="{{ $bannerUrl }}" 
+               class="inline-flex items-center gap-2.5 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 hover:bg-white/15 backdrop-blur-md border border-white/20 text-xs text-white transition-all shadow-lg group w-full max-w-[calc(100vw-2.5rem)] sm:w-auto sm:max-w-xl overflow-hidden relative cursor-pointer"
+               title="{{ $desktopTitle }}">
+                
+                <!-- Fixed Badge on Left -->
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-emerald-500 text-slate-950 shrink-0 z-10 shadow-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-slate-950 animate-ping"></span>
+                    {{ $bannerTag }}
+                </span>
+
+                <!-- Mobile View: Smooth Infinite Running Text Marquee (< sm) -->
+                <div class="sm:hidden flex-1 overflow-hidden relative whitespace-nowrap min-w-0 [mask-image:linear-gradient(to_right,transparent,black_8px,black_calc(100%-8px),transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_8px,black_calc(100%-8px),transparent)]">
+                    <div class="animate-ticker-mobile flex items-center">
+                        <span class="font-medium text-emerald-100 flex items-center gap-6 pr-6">
+                            <span>{{ $tickerText }}</span>
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400/70 inline-block"></span>
+                        </span>
+                        <span class="font-medium text-emerald-100 flex items-center gap-6 pr-6" aria-hidden="true">
+                            <span>{{ $tickerText }}</span>
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400/70 inline-block"></span>
+                        </span>
+                    </div>
                 </div>
-            @else
-                <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 hover:bg-white/15 backdrop-blur-md border border-white/20 text-xs text-white transition-all shadow-lg">
-                    <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-emerald-500 text-slate-950 shrink-0">
-                        <span class="w-1.5 h-1.5 rounded-full bg-slate-950 animate-ping"></span>
-                        PPDB {{ $academicYear }}
-                    </span>
-                    <span class="font-medium text-emerald-100">Pendaftaran Peserta Didik Baru SMA Resmi Dibuka</span>
+
+                <!-- Desktop View: Crisp Static Text with Arrow (sm+) -->
+                <div class="hidden sm:flex items-center gap-2 min-w-0">
+                    <span class="truncate font-medium text-emerald-100">{{ $desktopTitle }}</span>
+                    <svg class="w-3.5 h-3.5 text-emerald-400 group-hover:translate-x-0.5 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
                 </div>
-            @endif
+            </a>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">

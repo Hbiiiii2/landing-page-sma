@@ -113,10 +113,37 @@ body {
 .delay-400 { transition-delay: 400ms; }
 .delay-500 { transition-delay: 500ms; }
 
+/* Mobile Running Text Marquee for Announcement Bar */
+@keyframes ticker-slide {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+.animate-ticker-mobile {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: ticker-slide 18s linear infinite;
+    will-change: transform;
+}
+
+.animate-ticker-mobile:hover,
+.animate-ticker-mobile:active,
+.animate-ticker-mobile:focus-within {
+    animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .reveal-init {
         opacity: 1 !important;
         transform: none !important;
         transition: none !important;
+    }
+
+    .animate-ticker-mobile {
+        animation: none !important;
     }
 }
