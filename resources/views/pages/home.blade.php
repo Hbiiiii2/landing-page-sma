@@ -224,7 +224,7 @@
                     <!-- Main School Banner Frame -->
                     <div class="relative rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl bg-slate-900 aspect-[4/3] group">
                         <img src="{{ $heroImageSrc }}" 
-                             alt="Gedung Kampus {{ $schoolName }}" 
+                             alt="Gedung Sekolah {{ $schoolName }}" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                              onerror="this.src='{{ asset('images/banner-almadinah.png') }}'">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>
@@ -232,7 +232,7 @@
                         <div class="absolute bottom-4 left-4 right-4 text-left">
                             <div class="flex items-center gap-2 mb-1">
                                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                                <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-300">Kampus Terpadu BSD</span>
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-300">Kawasan Sekolah Terpadu</span>
                             </div>
                             <h2 class="text-base sm:text-lg font-black text-white">
                                 {{ $schoolName }}
@@ -414,7 +414,7 @@
                         <div class="space-y-1">
                             <div class="text-xs font-extrabold text-[#0D6B57]">Dokumen Brosur Resmi (PDF)</div>
                             <div class="text-[11px] text-slate-600 leading-relaxed">
-                                Memuat kurikulum lengkap, profil lulusan, program unggulan, tahfidz Al-Qur'an, dan fasilitas kampus.
+                                Memuat kurikulum lengkap, profil lulusan, program unggulan, tahfidz Al-Qur'an, dan fasilitas sekolah.
                             </div>
                         </div>
                     </div>
@@ -841,7 +841,7 @@
                         </a>
                         <a href="#kontak" 
                            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-xs uppercase tracking-wider transition-all">
-                            <span>Jadwalkan Visitasi Kampus</span>
+                            <span>Jadwalkan Kunjungan Sekolah</span>
                         </a>
                     </div>
 
@@ -902,14 +902,14 @@
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
                     </div>
                     <h3 class="text-base font-black text-slate-900">MIPA & Riset Sains</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">Persiapan Fakultas Kedokteran, Teknik, Farmasi, dan Sains Terapan.</p>
+                    <p class="text-xs text-slate-600 leading-relaxed">Persiapan Jurusan Kedokteran, Teknik, Farmasi, dan Sains Terapan.</p>
                 </div>
                 <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 shadow-sm space-y-3">
                     <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-800 flex items-center justify-center">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
                     </div>
                     <h3 class="text-base font-black text-slate-900">IPS & Global Studies</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">Fakultas Ekonomi, Hukum, Hubungan Internasional, dan Psikologi.</p>
+                    <p class="text-xs text-slate-600 leading-relaxed">Persiapan Jurusan Ekonomi, Hukum, Hubungan Internasional, dan Psikologi.</p>
                 </div>
                 <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200 shadow-sm space-y-3">
                     <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center">
@@ -1560,7 +1560,7 @@
                                     <svg class="w-8 h-8 sm:w-10 sm:h-10 fill-current translate-x-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                                 </a>
                                 <h4 class="text-base sm:text-lg font-extrabold text-white">Video Profil Resmi SMA</h4>
-                                <p class="text-xs text-emerald-100 max-w-sm">Tonton dinamika pembelajaran dan fasilitas kampus langsung di saluran YouTube resmi.</p>
+                                <p class="text-xs text-emerald-100 max-w-sm">Tonton dinamika pembelajaran dan fasilitas sekolah langsung di saluran YouTube resmi.</p>
                             </div>
                         </div>
                     @endif
@@ -1660,7 +1660,7 @@
 </section>
 
 <!-- ========================================================
-     10. FASILITAS KAMPUS SMA (REPRESENTATIF & LENGKAP)
+     10. FASILITAS SEKOLAH SMA (REPRESENTATIF & LENGKAP)
      Dinamis dari Filament Resource: App\Models\Facility
      ======================================================== -->
 @if($facilities->isNotEmpty())
@@ -1672,7 +1672,7 @@
                 Sarana & Prasarana
             </span>
             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight">
-                Fasilitas Kampus Representatif
+                Fasilitas Sekolah Representatif
             </h2>
             <div class="w-16 h-1 bg-emerald-600 rounded-full mx-auto"></div>
             <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -1908,7 +1908,7 @@
 </section>
 
 <!-- ========================================================
-     13. HUBUNGI KAMI & PETA KAMPUS TERPADU BSD
+     13. HUBUNGI KAMI & PETA LOKASI SEKOLAH BSD
      ======================================================== -->
 <section id="kontak" class="py-16 sm:py-20 bg-white relative">
     <div class="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
