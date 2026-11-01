@@ -58,6 +58,16 @@ class AppServiceProvider extends ServiceProvider
             URL::forceScheme('https');
         }
 
+        // Dynamically align public storage URL with current request host and scheme to avoid CORS and mixed-content issues in Filament FileUpload
+        if (! $this->app->runningInConsole()) {
+            config(['filesystems.disks.public.url' => asset('storage')]);
+        }
+
+        // Configure default public disk for all Filament FileUpload components
+        \Filament\Forms\Components\FileUpload::configureUsing(function (\Filament\Forms\Components\FileUpload $fileUpload) {
+            $fileUpload->disk('public')->visibility('public');
+        });
+
         // Always generate root-relative URLs for Vite assets (/build/assets/...)
         // This guarantees CSS/JS load seamlessly across localhost, IP, custom ports, and production HTTPS
         Vite::createAssetPathsUsing(fn ($path) => '/' . ltrim($path, '/'));
