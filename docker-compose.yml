@@ -40,13 +40,11 @@ services:
     depends_on:
       - app
     networks:
-      sma-network:
-        aliases:
-          - web
       smart-network:
         aliases:
           - sma-almadinah-web
           - landingpage_sma
+          - sma-web
     logging: *default-logging
 
   # -----------------------------------------------------------
@@ -63,7 +61,7 @@ services:
       - path: .env
         required: false
     environment:
-      DB_HOST: db
+      DB_HOST: ${DB_HOST:-sma-almadinah-db}
       DB_PORT: 3306
     labels:
       <<: *default-labels
@@ -74,9 +72,10 @@ services:
       db:
         condition: service_healthy
     networks:
-      sma-network:
+      smart-network:
         aliases:
-          - app
+          - sma-almadinah-app
+          - sma-app
     logging: *default-logging
 
   # -----------------------------------------------------------
@@ -107,9 +106,10 @@ services:
       retries: 10
       start_period: 10s
     networks:
-      sma-network:
+      smart-network:
         aliases:
-          - db
+          - sma-almadinah-db
+          - sma-db
     logging: *default-logging
 
   # -----------------------------------------------------------
@@ -124,7 +124,7 @@ services:
       - path: .env
         required: false
     environment:
-      DB_HOST: db
+      DB_HOST: ${DB_HOST:-sma-almadinah-db}
       DB_PORT: 3306
     labels:
       <<: *default-labels
@@ -137,9 +137,10 @@ services:
       app:
         condition: service_started
     networks:
-      sma-network:
+      smart-network:
         aliases:
-          - queue
+          - sma-almadinah-queue
+          - sma-queue
     logging: *default-logging
 
   # -----------------------------------------------------------
@@ -154,7 +155,7 @@ services:
       - path: .env
         required: false
     environment:
-      DB_HOST: db
+      DB_HOST: ${DB_HOST:-sma-almadinah-db}
       DB_PORT: 3306
     labels:
       <<: *default-labels
@@ -167,9 +168,10 @@ services:
       app:
         condition: service_started
     networks:
-      sma-network:
+      smart-network:
         aliases:
-          - scheduler
+          - sma-almadinah-scheduler
+          - sma-scheduler
     logging: *default-logging
 
   # -----------------------------------------------------------
@@ -188,12 +190,10 @@ services:
     depends_on:
       - web
     networks:
-      sma-network:
-        aliases:
-          - tunnel
       smart-network:
         aliases:
           - sma-almadinah-tunnel
+          - sma-tunnel
     profiles:
       - tunnel
     logging: *default-logging
@@ -207,9 +207,6 @@ volumes:
     driver: local
 
 networks:
-  sma-network:
-    name: sma-almadinah-network
-    driver: bridge
   smart-network:
     name: smart-network
     external: true
