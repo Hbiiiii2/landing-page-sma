@@ -1,4 +1,4 @@
-name: smp-almadinah
+name: sma-almadinah
 
 # -------------------------------------------------------------
 # Reusable Configurations (Anchors)
@@ -10,8 +10,8 @@ x-logging: &default-logging
     max-file: "3"
 
 x-common-labels: &default-labels
-  com.docker.compose.project: "smp-almadinah"
-  app.kubernetes.io/part-of: "smp-almadinah"
+  com.docker.compose.project: "sma-almadinah"
+  app.kubernetes.io/part-of: "sma-almadinah"
   app.kubernetes.io/managed-by: "docker-compose"
 
 services:
@@ -22,17 +22,17 @@ services:
     build:
       context: .
       dockerfile: docker/nginx/Dockerfile
-    image: smp-almadinah-web:latest
-    container_name: smp-almadinah-web
+    image: sma-almadinah-web:latest
+    container_name: sma-almadinah-web
     restart: unless-stopped
     ports:
-      - "${APP_PORT:-8010}:80"
+      - "${APP_PORT:-8020}:80"
     labels:
       <<: *default-labels
       com.docker.compose.service: "web"
       dockflare.enable: "true"
-      dockflare.hostname: "smpaickkmb.sch.id"
-      dockflare.service: "http://smp-almadinah-web:80"
+      dockflare.hostname: "${DOCKFLARE_HOSTNAME:-smaalmadinah.sch.id}"
+      dockflare.service: "http://sma-almadinah-web:80"
     volumes:
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
       - ./public:/var/www/html/public:ro
@@ -40,11 +40,13 @@ services:
     depends_on:
       - app
     networks:
+      sma-network:
+        aliases:
+          - web
       smart-network:
         aliases:
-          - smp-almadinah-web
-          - landingpage_smp
-          - web
+          - sma-almadinah-web
+          - landingpage_sma
     logging: *default-logging
 
   # -----------------------------------------------------------
@@ -54,8 +56,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: smp-almadinah-app:latest
-    container_name: smp-almadinah-app
+    image: sma-almadinah-app:latest
+    container_name: sma-almadinah-app
     restart: unless-stopped
     env_file:
       - path: .env
@@ -72,9 +74,8 @@ services:
       db:
         condition: service_healthy
     networks:
-      smart-network:
+      sma-network:
         aliases:
-          - smp-almadinah-app
           - app
     logging: *default-logging
 
@@ -83,15 +84,15 @@ services:
   # -----------------------------------------------------------
   db:
     image: mysql:8.0
-    container_name: smp-almadinah-db
+    container_name: sma-almadinah-db
     restart: unless-stopped
     command: >
       --default-authentication-plugin=mysql_native_password
       --character-set-server=utf8mb4
       --collation-server=utf8mb4_unicode_ci
     environment:
-      MYSQL_DATABASE: ${DB_DATABASE:-smp}
-      MYSQL_USER: ${DB_USERNAME:-smp_user}
+      MYSQL_DATABASE: ${DB_DATABASE:-sma}
+      MYSQL_USER: ${DB_USERNAME:-sma_user}
       MYSQL_PASSWORD: ${DB_PASSWORD:-secret123}
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-rootsecret123}
     labels:
@@ -106,9 +107,8 @@ services:
       retries: 10
       start_period: 10s
     networks:
-      smart-network:
+      sma-network:
         aliases:
-          - smp-almadinah-db
           - db
     logging: *default-logging
 
@@ -116,8 +116,8 @@ services:
   # Background Queue Worker
   # -----------------------------------------------------------
   queue:
-    image: smp-almadinah-app:latest
-    container_name: smp-almadinah-queue
+    image: sma-almadinah-app:latest
+    container_name: sma-almadinah-queue
     restart: unless-stopped
     command: ["php", "artisan", "queue:work", "--sleep=3", "--tries=3", "--max-time=3600"]
     env_file:
@@ -137,9 +137,8 @@ services:
       app:
         condition: service_started
     networks:
-      smart-network:
+      sma-network:
         aliases:
-          - smp-almadinah-queue
           - queue
     logging: *default-logging
 
@@ -147,8 +146,8 @@ services:
   # Scheduled Tasks Runner
   # -----------------------------------------------------------
   scheduler:
-    image: smp-almadinah-app:latest
-    container_name: smp-almadinah-scheduler
+    image: sma-almadinah-app:latest
+    container_name: sma-almadinah-scheduler
     restart: unless-stopped
     command: ["php", "artisan", "schedule:work"]
     env_file:
@@ -168,9 +167,8 @@ services:
       app:
         condition: service_started
     networks:
-      smart-network:
+      sma-network:
         aliases:
-          - smp-almadinah-scheduler
           - scheduler
     logging: *default-logging
 
@@ -181,7 +179,7 @@ services:
   # -----------------------------------------------------------
   tunnel:
     image: cloudflare/cloudflared:latest
-    container_name: smp-almadinah-tunnel
+    container_name: sma-almadinah-tunnel
     restart: unless-stopped
     command: tunnel --no-autoupdate run --token ${CLOUDFLARE_TUNNEL_TOKEN:-}
     labels:
@@ -190,23 +188,28 @@ services:
     depends_on:
       - web
     networks:
+      sma-network:
+        aliases:
+          - tunnel
       smart-network:
         aliases:
-          - smp-almadinah-tunnel
-          - tunnel
+          - sma-almadinah-tunnel
     profiles:
       - tunnel
     logging: *default-logging
 
 volumes:
   db_data:
-    name: smp-almadinah-db-data
+    name: sma-almadinah-db-data
     driver: local
   app_storage:
-    name: smp-almadinah-app-storage
+    name: sma-almadinah-app-storage
     driver: local
 
 networks:
+  sma-network:
+    name: sma-almadinah-network
+    driver: bridge
   smart-network:
     name: smart-network
     external: true

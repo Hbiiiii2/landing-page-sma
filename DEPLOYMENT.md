@@ -63,8 +63,8 @@ Masuk ke direktori web server (misal `/var/www/`):
 ```bash
 sudo mkdir -p /var/www
 cd /var/www
-git clone <URL_REPOSITORY_ANDA> smpalmadinah
-cd smpalmadinah
+git clone https://github.com/Hbiiiii2/landing-page-sma.git smaalmadinah
+cd smaalmadinah
 ```
 
 ### Langkah 2: Buat & Sesuaikan File `.env`
@@ -80,8 +80,9 @@ Sesuaikan parameter penting berikut:
 - `APP_ENV`: `production`
 - `APP_DEBUG`: `false`
 - `APP_URL`: Masukkan domain Anda, contoh: `https://smaalmadinah.sch.id`
-- `DB_DATABASE`: `smp`
-- `DB_USERNAME`: `smp_user`
+- `APP_PORT`: `8020` *(Bebas bentrok dengan SMP yang menggunakan port 8010)*
+- `DB_DATABASE`: `sma`
+- `DB_USERNAME`: `sma_user`
 - `DB_PASSWORD`: Buat password database yang kuat
 - `DB_ROOT_PASSWORD`: Buat password root database yang kuat
 - Konfigurasi email SMTP jika ingin mengirim notifikasi (opsional).
@@ -136,9 +137,9 @@ Jika Anda sudah memiliki container `smart-cloudf` aktif di server:
 3. Pilih Tunnel Anda yang sedang aktif &rarr; klik **Configure**.
 4. Buka tab **Public Hostname** &rarr; klik **Add a public hostname**.
 5. Isi konfigurasi:
-   - **Subdomain / Domain**: Masukkan domain yang Anda inginkan (misal `smp.domainanda.com` atau domain utama).
+   - **Subdomain / Domain**: Masukkan domain yang Anda inginkan (misal `sma.domainanda.com` atau `smaalmadinah.sch.id`).
    - **Service Type**: `HTTP`
-   - **URL**: `localhost:8010` (atau `172.17.0.1:8010` jika dari dalam docker network).
+   - **URL**: `localhost:8020` (atau `sma-almadinah-web:80` jika tunnel berada di jaringan `smart-network`).
 6. Klik **Save Hostname**.
 7. Website langsung aktif dengan HTTPS aman tanpa perlu buka port di firewall server!
 
@@ -147,14 +148,14 @@ Jika Anda sudah memiliki container `smart-cloudf` aktif di server:
 ### Opsi 2: Menggunakan Dedicated Cloudflare Tunnel Container
 Jika Anda ingin project ini memiliki container tunnel sendiri yang terisolasi:
 1. Di dashboard **Cloudflare Zero Trust** &rarr; **Networks** &rarr; **Tunnels** &rarr; klik **Create a tunnel**.
-2. Pilih tipe **Cloudflared**, beri nama (misal: `smpalmadinah-tunnel`).
+2. Pilih tipe **Cloudflared**, beri nama (misal: `smaalmadinah-tunnel`).
 3. Pada halaman instalasi, salin **Tunnel Token** (panjang berupa karakter acak).
 4. Masukkan token tersebut ke file `.env`:
    ```env
    CLOUDFLARE_TUNNEL_TOKEN=eyJhIjoi...
    ```
 5. Pada tab **Public Hostname** di Cloudflare:
-   - Domain: `smp.domainanda.com`
+   - Domain: `sma.domainanda.com`
    - Service Type: `HTTP`
    - URL: `web:80` *(karena container tunnel dan web berada di dalam satu docker network)*
 6. Jalankan container beserta tunnel-nya:
@@ -193,7 +194,7 @@ docker compose logs -f db
 Ketika Anda melakukan update kode atau commit baru:
 
 ```bash
-cd /var/www/smpalmadinah
+cd /var/www/smaalmadinah
 git pull origin main
 docker compose up -d --build
 ```
@@ -202,10 +203,10 @@ docker compose up -d --build
 ### Backup & Restore Database
 ```bash
 # Backup database ke file .sql
-docker compose exec db mysqldump -u smp_user -pGantiPasswordKuatDB123! smp > backup_smp_$(date +%F).sql
+docker compose exec db mysqldump -u sma_user -pGantiPasswordKuatDB123! sma > backup_sma_$(date +%F).sql
 
 # Restore database dari file .sql
-docker compose exec -T db mysql -u smp_user -pGantiPasswordKuatDB123! smp < backup_smp_2026-10-08.sql
+docker compose exec -T db mysql -u sma_user -pGantiPasswordKuatDB123! sma < backup_sma_2026-10-08.sql
 ```
 
 ### Membersihkan / Refresh Cache Aplikasi
