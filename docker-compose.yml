@@ -18,7 +18,7 @@ services:
   # -----------------------------------------------------------
   # Web Server (Nginx)
   # -----------------------------------------------------------
-  web:
+  sma-almadinah-web:
     build:
       context: .
       dockerfile: docker/nginx/Dockerfile
@@ -29,7 +29,7 @@ services:
       - "${APP_PORT:-8020}:80"
     labels:
       <<: *default-labels
-      com.docker.compose.service: "web"
+      com.docker.compose.service: "sma-almadinah-web"
       dockflare.enable: "true"
       dockflare.hostname: "${DOCKFLARE_HOSTNAME:-smaalmadinah.sch.id}"
       dockflare.service: "http://sma-almadinah-web:80"
@@ -38,19 +38,18 @@ services:
       - ./public:/var/www/html/public:ro
       - app_storage:/var/www/html/storage:ro
     depends_on:
-      - app
+      - sma-almadinah-app
     networks:
       smart-network:
         aliases:
           - sma-almadinah-web
           - landingpage_sma
-          - sma-web
     logging: *default-logging
 
   # -----------------------------------------------------------
   # Application (PHP 8.4-FPM + Laravel + Filament)
   # -----------------------------------------------------------
-  app:
+  sma-almadinah-app:
     build:
       context: .
       dockerfile: Dockerfile
@@ -65,23 +64,22 @@ services:
       DB_PORT: 3306
     labels:
       <<: *default-labels
-      com.docker.compose.service: "app"
+      com.docker.compose.service: "sma-almadinah-app"
     volumes:
       - app_storage:/var/www/html/storage
     depends_on:
-      db:
+      sma-almadinah-db:
         condition: service_healthy
     networks:
       smart-network:
         aliases:
           - sma-almadinah-app
-          - sma-app
     logging: *default-logging
 
   # -----------------------------------------------------------
   # Database (MySQL 8.0)
   # -----------------------------------------------------------
-  db:
+  sma-almadinah-db:
     image: mysql:8.0
     container_name: sma-almadinah-db
     restart: unless-stopped
@@ -96,7 +94,7 @@ services:
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-rootsecret123}
     labels:
       <<: *default-labels
-      com.docker.compose.service: "db"
+      com.docker.compose.service: "sma-almadinah-db"
     volumes:
       - db_data:/var/lib/mysql
     healthcheck:
@@ -109,13 +107,12 @@ services:
       smart-network:
         aliases:
           - sma-almadinah-db
-          - sma-db
     logging: *default-logging
 
   # -----------------------------------------------------------
   # Background Queue Worker
   # -----------------------------------------------------------
-  queue:
+  sma-almadinah-queue:
     image: sma-almadinah-app:latest
     container_name: sma-almadinah-queue
     restart: unless-stopped
@@ -128,25 +125,24 @@ services:
       DB_PORT: 3306
     labels:
       <<: *default-labels
-      com.docker.compose.service: "queue"
+      com.docker.compose.service: "sma-almadinah-queue"
     volumes:
       - app_storage:/var/www/html/storage
     depends_on:
-      db:
+      sma-almadinah-db:
         condition: service_healthy
-      app:
+      sma-almadinah-app:
         condition: service_started
     networks:
       smart-network:
         aliases:
           - sma-almadinah-queue
-          - sma-queue
     logging: *default-logging
 
   # -----------------------------------------------------------
   # Scheduled Tasks Runner
   # -----------------------------------------------------------
-  scheduler:
+  sma-almadinah-scheduler:
     image: sma-almadinah-app:latest
     container_name: sma-almadinah-scheduler
     restart: unless-stopped
@@ -159,19 +155,18 @@ services:
       DB_PORT: 3306
     labels:
       <<: *default-labels
-      com.docker.compose.service: "scheduler"
+      com.docker.compose.service: "sma-almadinah-scheduler"
     volumes:
       - app_storage:/var/www/html/storage
     depends_on:
-      db:
+      sma-almadinah-db:
         condition: service_healthy
-      app:
+      sma-almadinah-app:
         condition: service_started
     networks:
       smart-network:
         aliases:
           - sma-almadinah-scheduler
-          - sma-scheduler
     logging: *default-logging
 
   # -----------------------------------------------------------
@@ -179,21 +174,20 @@ services:
   # Aktifkan dengan menambahkan CLOUDFLARE_TUNNEL_TOKEN di .env
   # lalu jalankan: docker compose --profile tunnel up -d
   # -----------------------------------------------------------
-  tunnel:
+  sma-almadinah-tunnel:
     image: cloudflare/cloudflared:latest
     container_name: sma-almadinah-tunnel
     restart: unless-stopped
     command: tunnel --no-autoupdate run --token ${CLOUDFLARE_TUNNEL_TOKEN:-}
     labels:
       <<: *default-labels
-      com.docker.compose.service: "tunnel"
+      com.docker.compose.service: "sma-almadinah-tunnel"
     depends_on:
-      - web
+      - sma-almadinah-web
     networks:
       smart-network:
         aliases:
           - sma-almadinah-tunnel
-          - sma-tunnel
     profiles:
       - tunnel
     logging: *default-logging

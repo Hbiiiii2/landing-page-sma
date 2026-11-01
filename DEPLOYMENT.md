@@ -108,8 +108,8 @@ Docker akan secara otomatis:
 Jika `APP_KEY` pada file `.env` masih kosong, jalankan:
 
 ```bash
-docker compose exec app php artisan key:generate --force
-docker compose exec app php artisan config:cache
+docker compose exec sma-almadinah-app php artisan key:generate --force
+docker compose exec sma-almadinah-app php artisan config:cache
 ```
 
 ### Langkah 5: Buat Akun Admin Filament
@@ -117,10 +117,10 @@ Untuk login ke dashboard admin Filament (`/admin`):
 
 ```bash
 # Opsi 1: Jalankan Seeder awal (jika sudah ada seeder default)
-docker compose exec app php artisan db:seed --force
+docker compose exec sma-almadinah-app php artisan db:seed --force
 
 # Opsi 2: Atau buat user admin baru secara interaktif
-docker compose exec app php artisan make:filament-user
+docker compose exec sma-almadinah-app php artisan make:filament-user
 ```
 Masukkan nama, email, dan password admin Anda.
 
@@ -181,13 +181,13 @@ Jika Anda tidak menggunakan tunnel melainkan IP Public VPS:
 docker compose ps
 
 # Cek log aplikasi Laravel secara live
-docker compose logs -f app
+docker compose logs -f sma-almadinah-app
 
 # Cek log web server Nginx secara live
-docker compose logs -f web
+docker compose logs -f sma-almadinah-web
 
 # Cek log database
-docker compose logs -f db
+docker compose logs -f sma-almadinah-db
 ```
 
 ### Update Aplikasi / Redeploy Versi Terbaru
@@ -198,19 +198,19 @@ cd /var/www/smaalmadinah
 git pull origin main
 docker compose up -d --build
 ```
-*Catatan: Data di database MySQL dan file upload foto/brosur di storage tidak akan terhapus karena disimpan di Docker Volumes persisten (`db_data` dan `app_storage`).*
+*Catatan: Data di database MySQL dan file upload foto/brosur di storage tidak akan terhapus karena disimpan di Docker Volumes persisten (`sma-almadinah-db-data` dan `sma-almadinah-app-storage`).*
 
 ### Backup & Restore Database
 ```bash
 # Backup database ke file .sql
-docker compose exec db mysqldump -u sma_user -pGantiPasswordKuatDB123! sma > backup_sma_$(date +%F).sql
+docker compose exec sma-almadinah-db mysqldump -u sma_user -pGantiPasswordKuatDB123! sma > backup_sma_$(date +%F).sql
 
 # Restore database dari file .sql
-docker compose exec -T db mysql -u sma_user -pGantiPasswordKuatDB123! sma < backup_sma_2026-10-08.sql
+docker compose exec -T sma-almadinah-db mysql -u sma_user -pGantiPasswordKuatDB123! sma < backup_sma_2026-10-08.sql
 ```
 
 ### Membersihkan / Refresh Cache Aplikasi
 ```bash
-docker compose exec app php artisan optimize:clear
-docker compose exec app php artisan optimize
+docker compose exec sma-almadinah-app php artisan optimize:clear
+docker compose exec sma-almadinah-app php artisan optimize
 ```
