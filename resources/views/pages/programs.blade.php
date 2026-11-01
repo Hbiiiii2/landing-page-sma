@@ -32,21 +32,55 @@
             <p class="text-xs text-[#66676B] mt-1">Struktur kurikulum terintegrasi untuk membentuk siswa yang unggul dan beradab.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             @forelse ($programs as $prog)
-                <div class="bg-[#FAF9FB] rounded-2xl border border-[#E7E3EA] p-5 sm:p-8 space-y-3.5 hover:border-[#9377AD] hover:bg-white hover:shadow-sm transition-all">
-                    <div class="flex items-center justify-between">
-                        <span class="text-xs font-mono font-bold text-[#9377AD] uppercase tracking-wider">
-                            {{ $prog->category ?? 'Program' }}
-                        </span>
-                        <span class="text-xs font-bold bg-[#F4F0F7] text-[#684681] px-3 py-1 rounded-full border border-[#E3D9EC]">
-                            Al-Madinah BSD
-                        </span>
+                <div class="bg-[#FAF9FB] rounded-2xl sm:rounded-3xl border border-[#E7E3EA] overflow-hidden hover:border-[#9377AD] hover:bg-white hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+                    @if ($prog->image_url)
+                        <div class="relative h-48 sm:h-60 w-full overflow-hidden bg-slate-100">
+                            <img src="{{ $prog->image_url }}" 
+                                 alt="{{ $prog->name }}" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                 loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                            <div class="absolute bottom-3.5 left-4 right-4 flex items-center justify-between">
+                                <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[#684681] uppercase tracking-wider shadow-sm">
+                                    {{ $prog->category ?? 'Program' }}
+                                </span>
+                                <span class="text-[11px] font-semibold text-white bg-black/40 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+                                    SMA Al-Madinah BSD
+                                </span>
+                            </div>
+                        </div>
+                    @endif
+
+                    <div class="p-5 sm:p-7 space-y-3.5 flex-1 flex flex-col justify-between">
+                        <div class="space-y-2.5">
+                            @if (! $prog->image_url)
+                                <div class="flex items-center justify-between">
+                                    <span class="text-xs font-mono font-bold text-[#9377AD] uppercase tracking-wider">
+                                        {{ $prog->category ?? 'Program' }}
+                                    </span>
+                                    <span class="text-xs font-bold bg-[#F4F0F7] text-[#684681] px-3 py-1 rounded-full border border-[#E3D9EC]">
+                                        SMA Al-Madinah BSD
+                                    </span>
+                                </div>
+                            @endif
+
+                            <h3 class="text-lg sm:text-xl font-black text-[#202124] group-hover:text-[#684681] transition-colors">
+                                {{ $prog->name }}
+                            </h3>
+
+                            @if ($prog->summary && $prog->description)
+                                <p class="text-xs sm:text-sm font-semibold text-[#2A923F] leading-snug">
+                                    {{ $prog->summary }}
+                                </p>
+                            @endif
+
+                            <p class="text-xs sm:text-sm text-[#66676B] leading-relaxed">
+                                {{ $prog->description ?? $prog->summary }}
+                            </p>
+                        </div>
                     </div>
-                    <h3 class="text-base sm:text-lg font-bold text-[#202124]">{{ $prog->name }}</h3>
-                    <p class="text-xs sm:text-sm text-[#66676B] leading-relaxed">
-                        {{ $prog->description ?? $prog->summary }}
-                    </p>
                 </div>
             @empty
                 <div class="col-span-2 text-center text-xs text-[#66676B] py-12 bg-[#FAF9FB] rounded-2xl border border-[#E7E3EA]">

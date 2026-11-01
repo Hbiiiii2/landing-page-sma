@@ -23,7 +23,22 @@ class SchoolProgramForm
                     ->default('unggulan'),
                 TextInput::make('icon'),
                 FileUpload::make('image')
-                    ->image(),
+                    ->label('Foto / Banner Program')
+                    ->image()
+                    ->disk('public')
+                    ->visibility('public')
+                    ->directory('programs')
+                    ->imageEditor()
+                    ->imageEditorAspectRatios([
+                        null,
+                        '16:9',
+                        '4:3',
+                        '1:1',
+                    ])
+                    ->openable()
+                    ->downloadable()
+                    ->maxSize(5120)
+                    ->helperText('Format JPG, JPEG, PNG, atau WebP (Maksimal 5MB). Foto ini akan tampil pada kartu pilar program di website.'),
                 TextInput::make('summary'),
                 Textarea::make('description')
                     ->columnSpanFull(),

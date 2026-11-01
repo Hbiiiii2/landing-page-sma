@@ -33,4 +33,19 @@ class SchoolProgram extends Model
     {
         return $query->where('is_active', true)->orderBy('order');
     }
+
+    /**
+     * Get image URL with safe public asset fallback
+     */
+    public function getImageUrlAttribute(): ?string
+    {
+        if (! empty($this->image)) {
+            if (Str::startsWith($this->image, ['http://', 'https://'])) {
+                return $this->image;
+            }
+            return asset('storage/' . $this->image);
+        }
+
+        return null;
+    }
 }
