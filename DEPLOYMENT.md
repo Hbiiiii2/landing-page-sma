@@ -80,7 +80,7 @@ Sesuaikan parameter penting berikut:
 - `APP_ENV`: `production`
 - `APP_DEBUG`: `false`
 - `APP_URL`: Masukkan domain Anda, contoh: `https://smaalmadinah.sch.id`
-- `APP_PORT`: `8020` *(Bebas bentrok dengan SMP yang menggunakan port 8010)*
+- `APP_PORT`: `8030` *(Bebas bentrok dengan SMP: 8010 & TK: 8020)*
 - `DB_DATABASE`: `sma`
 - `DB_USERNAME`: `sma_user`
 - `DB_PASSWORD`: Buat password database yang kuat
@@ -140,7 +140,7 @@ Cukup hubungkan domain SMA melalui dashboard Cloudflare:
    - **Subdomain / Domain**: Masukkan domain yang Anda inginkan (misal `smaalmadinah.sch.id` atau `sma.domainanda.com`).
    - **Service Type**: `HTTP`
    - **URL**: `sma-almadinah-web:80` *(langsung terhubung melalui DNS container di dalam `smart-network`)*
-     *(Atau gunakan `localhost:8020` jika diarahkan via host)*
+     *(Atau gunakan `localhost:8030` jika diarahkan via host)*
 6. Klik **Save Hostname**.
 7. Website SMA langsung aktif di internet dengan sertifikat SSL/HTTPS otomatis dari Cloudflare tanpa perlu buka port firewall tambahan!
 

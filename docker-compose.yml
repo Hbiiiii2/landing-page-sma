@@ -26,7 +26,7 @@ services:
     container_name: sma-almadinah-web
     restart: unless-stopped
     ports:
-      - "${APP_PORT:-8020}:80"
+      - "${APP_PORT:-8030}:80"
     labels:
       <<: *default-labels
       com.docker.compose.service: "sma-almadinah-web"
