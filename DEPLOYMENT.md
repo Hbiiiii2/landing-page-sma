@@ -128,45 +128,26 @@ Masukkan nama, email, dan password admin Anda.
 
 ## 4. Konfigurasi Domain & Cloudflare (HTTPS di Internet)
 
-Berdasarkan server Anda yang sudah menjalankan **Cloudflare Tunnel (`cloudflare/cloudflared`)**, Anda dapat memilih salah satu cara berikut:
+Karena server VPS Anda sudah memiliki container **Cloudflare Tunnel** yang aktif di dalam **`smart-network`**, Anda **TIDAK PERLU** membuat container tunnel baru ataupun memasukkan token tunnel baru di project ini.
 
-### Opsi 1: Menambahkan ke Cloudflare Tunnel yang Sudah Ada (Paling Mudah)
-Jika Anda sudah memiliki container `smart-cloudf` aktif di server:
-1. Buka dashboard [Cloudflare Zero Trust](https://one.dash.cloudflare.com/)
+Cukup hubungkan domain SMA melalui dashboard Cloudflare:
+
+1. Buka dashboard [Cloudflare Zero Trust](https://one.dash.cloudflare.com/).
 2. Buka menu **Networks** &rarr; **Tunnels**.
 3. Pilih Tunnel Anda yang sedang aktif &rarr; klik **Configure**.
 4. Buka tab **Public Hostname** &rarr; klik **Add a public hostname**.
 5. Isi konfigurasi:
-   - **Subdomain / Domain**: Masukkan domain yang Anda inginkan (misal `sma.domainanda.com` atau `smaalmadinah.sch.id`).
+   - **Subdomain / Domain**: Masukkan domain yang Anda inginkan (misal `smaalmadinah.sch.id` atau `sma.domainanda.com`).
    - **Service Type**: `HTTP`
-   - **URL**: `localhost:8020` (atau `sma-almadinah-web:80` jika tunnel berada di jaringan `smart-network`).
+   - **URL**: `sma-almadinah-web:80` *(langsung terhubung melalui DNS container di dalam `smart-network`)*
+     *(Atau gunakan `localhost:8020` jika diarahkan via host)*
 6. Klik **Save Hostname**.
-7. Website langsung aktif dengan HTTPS aman tanpa perlu buka port di firewall server!
+7. Website SMA langsung aktif di internet dengan sertifikat SSL/HTTPS otomatis dari Cloudflare tanpa perlu buka port firewall tambahan!
 
 ---
 
-### Opsi 2: Menggunakan Dedicated Cloudflare Tunnel Container
-Jika Anda ingin project ini memiliki container tunnel sendiri yang terisolasi:
-1. Di dashboard **Cloudflare Zero Trust** &rarr; **Networks** &rarr; **Tunnels** &rarr; klik **Create a tunnel**.
-2. Pilih tipe **Cloudflared**, beri nama (misal: `smaalmadinah-tunnel`).
-3. Pada halaman instalasi, salin **Tunnel Token** (panjang berupa karakter acak).
-4. Masukkan token tersebut ke file `.env`:
-   ```env
-   CLOUDFLARE_TUNNEL_TOKEN=eyJhIjoi...
-   ```
-5. Pada tab **Public Hostname** di Cloudflare:
-   - Domain: `sma.domainanda.com`
-   - Service Type: `HTTP`
-   - URL: `web:80` *(karena container tunnel dan web berada di dalam satu docker network)*
-6. Jalankan container beserta tunnel-nya:
-   ```bash
-   docker compose --profile tunnel up -d
-   ```
-
----
-
-### Opsi 3: Menggunakan DNS Proxy Standar (A Record Cloudflare)
-Jika Anda tidak menggunakan tunnel melainkan IP Public VPS:
+### Opsi Alternatif: Direct IP VPS (Tanpa Tunnel)
+Jika suatu saat Anda ingin mengakses langsung via IP VPS tanpa Cloudflare Tunnel:
 1. Di DNS Cloudflare, buat **A Record** mengarah ke IP Public VPS (Proxy status: ON / Awan Oranye).
 2. Di `.env`, ubah `APP_PORT=80` (pastikan port 80 VPS belum dipakai aplikasi lain).
 3. Jalankan `docker compose up -d`.

@@ -169,29 +169,6 @@ services:
           - sma-almadinah-scheduler
     logging: *default-logging
 
-  # -----------------------------------------------------------
-  # Cloudflare Tunnel (Optional Dedicated Container)
-  # Aktifkan dengan menambahkan CLOUDFLARE_TUNNEL_TOKEN di .env
-  # lalu jalankan: docker compose --profile tunnel up -d
-  # -----------------------------------------------------------
-  sma-almadinah-tunnel:
-    image: cloudflare/cloudflared:latest
-    container_name: sma-almadinah-tunnel
-    restart: unless-stopped
-    command: tunnel --no-autoupdate run --token ${CLOUDFLARE_TUNNEL_TOKEN:-}
-    labels:
-      <<: *default-labels
-      com.docker.compose.service: "sma-almadinah-tunnel"
-    depends_on:
-      - sma-almadinah-web
-    networks:
-      smart-network:
-        aliases:
-          - sma-almadinah-tunnel
-    profiles:
-      - tunnel
-    logging: *default-logging
-
 volumes:
   db_data:
     name: sma-almadinah-db-data
