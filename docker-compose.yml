@@ -60,7 +60,7 @@ services:
       - path: .env
         required: false
     environment:
-      DB_HOST: ${DB_HOST:-sma-almadinah-db}
+      DB_HOST: sma-almadinah-db
       DB_PORT: 3306
     labels:
       <<: *default-labels
@@ -120,7 +120,7 @@ services:
       - path: .env
         required: false
     environment:
-      DB_HOST: ${DB_HOST:-sma-almadinah-db}
+      DB_HOST: sma-almadinah-db
       DB_PORT: 3306
     labels:
       <<: *default-labels
@@ -150,7 +150,7 @@ services:
       - path: .env
         required: false
     environment:
-      DB_HOST: ${DB_HOST:-sma-almadinah-db}
+      DB_HOST: sma-almadinah-db
       DB_PORT: 3306
     labels:
       <<: *default-labels
